@@ -1,18 +1,19 @@
-// import React from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-/** @jsx jsx */
-import { jsx } from '@emotion/core'
+// import { jsx } from '@emotion/core'
 
-function App() {
+import { css } from 'emotion'
+
+const App: React.FC = (props) => {
   return (
     <div className="App">
-      <header className="App-header" css={{
-      backgroundColor: 'green'
-    }} >
+      <header className={css`
+        background-color: ${props.hasOwnProperty("yellow") ? "green" : "brown"};
+      `}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
