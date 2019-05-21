@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-setTimeout(() => {
+setInterval(() => {
+  console.log("render")
   ReactDOM.render(<App />, document.getElementById('root'));
 }, 1000)
 

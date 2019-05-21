@@ -1,16 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import { jsx } from '@emotion/core'
-
-import { css } from 'emotion'
 
 const App: React.FC = (props) => {
   return (
     <div className="App">
-      <header className={css`
-        background-color: ${props.hasOwnProperty("yellow") ? "green" : "brown"};
-      `}>
+      <header css={{
+        width: "100%",
+        height: "1000px",
+        backgroundColor: "green"
+      }}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
