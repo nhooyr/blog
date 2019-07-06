@@ -1,18 +1,18 @@
 import { styled } from "linaria/react"
 import React from "react"
+import PlainLink from "./PlainLink"
 
 const PostIndex: React.FC = () => {
   return (
     <Main>
-      I'm Anmol. I'm a software engineer in Toronto, Canada. This is my personal site and blog.
       <ol reversed>
         {[...Array(10).keys()].reverse().map(i => {
           i += 1
           return (
             <li key={i}>
-              {i === 10 ? <h2>2019</h2> : null}
-              {i === 5 ? <h2>2018</h2> : null}
-              <a href="https://example.com">
+              {i === 10 ? <IndexYear y="2019" /> : null}
+              {i === 5 ? <IndexYear y="2018" /> : null}
+              <a href="https://example2.com">
                 <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                 <PostDate>May 25</PostDate>
               </a>
@@ -26,7 +26,7 @@ const PostIndex: React.FC = () => {
 
 const Main = styled.main`
   flex: 1;
-  
+
   ol {
     padding: 0;
     width: 100%;
@@ -41,12 +41,20 @@ const Main = styled.main`
     display: flex;
     justify-content: space-between;
   }
-  
-  h2 {
+`
+
+const IndexYear: React.FC<{ y: string }> = props => {
+  const H2 = styled.h2`
     font-weight: normal;
     margin-top: 50px;
-  }
-`
+  `
+
+  return (
+    <H2 id={props.y}>
+      <PlainLink href={`/#${props.y}`}>{props.y}</PlainLink>
+    </H2>
+  )
+}
 
 const PostTitle = styled.div`
   flex: 1;

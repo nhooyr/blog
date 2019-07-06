@@ -2,6 +2,7 @@ import { css } from "linaria"
 import React from "react"
 import githubIcon from "simple-icons/icons/github.svg"
 import twitterIcon from "simple-icons/icons/twitter.svg"
+import PlainLink from "./PlainLink"
 
 const App: React.FC = () => {
   return (
@@ -37,7 +38,9 @@ const App: React.FC = () => {
       >
         <ul>
           <li>
-            <h1>nhooyr</h1>
+            <h1>
+              <PlainLink href="/">nhooyr</PlainLink>
+            </h1>
           </li>
           <li>
             <a href="https://github.com/nhooyr">
