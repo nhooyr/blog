@@ -1,0 +1,40 @@
+# eslint config is from https://github.com/facebook/create-react-app/blob/45197e67fd5ff4c0fa315ec7d91eead354e4bdd8/packages/eslint-config-react-app/index.js
+parser: "@typescript-eslint/parser"
+env:
+  browser: true
+  commonjs: true
+  es6: true
+  jest: true
+  node: true
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+
+extends:
+  - eslint:recommended # Enables recommended rules.
+  - plugin:import/recommended # https://www.npmjs.com/package/eslint-plugin-import#typescript
+  - plugin:import/typescript # https://www.npmjs.com/package/eslint-plugin-import#typescript
+  - plugin:react/recommended # https://www.npmjs.com/package/eslint-plugin-react
+  - plugin:@typescript-eslint/recommended # https://github.com/typescript-eslint/typescript-eslint
+  - prettier/@typescript-eslint # # https://www.npmjs.com/package/eslint-config-prettier
+  - prettier # https://www.npmjs.com/package/eslint-config-prettier
+  - plugin:jsx-a11y/strict # https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+
+plugins:
+  - react-hooks
+
+settings:
+  react:
+    version: detect
+
+rules:
+  "@typescript-eslint/explicit-function-return-type": false
+  "@typescript-eslint/no-non-null-assertion": false
+  "@typescript-eslint/no-use-before-define": false
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react/prop-types: false
+  react/no-unescaped-entities: false

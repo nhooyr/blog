@@ -1,0 +1,5 @@
+plugins:
+  - stylelint-no-unsupported-browser-features
+extends:
+  - stylelint-config-recommended
+  - linaria/stylelint-config

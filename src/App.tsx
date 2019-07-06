@@ -1,70 +1,120 @@
+import { css } from "linaria"
 import React from "react"
-import appCSS from "./App.module.css"
-import fetchAsText from "./fetch"
-import githubIcon from "simple-icons/icons/github.svg"
-import twitterIcon from "simple-icons/icons/twitter.svg"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
+export const globalCSS = css`
+  /* stylelint-disable selector-pseudo-class-no-unknown */
+  :global() {
+    @import-sanitize;
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+      word-wrap: break-word;
+      padding: 20px 20px;
+      max-width: 650px;
+      min-width: 320px;
+      margin: auto;
+    }
+  }
+`
 
 const App: React.FC = () => {
-  let ctxFn = require.context("./posts", false, /\.md$/)
+  return (
+    <>
+      <Header />
 
-  ctxFn.keys().forEach(async key => {
-    let any = ctxFn(key)
-    console.log(await fetchAsText(any))
-  })
+      <main
+        className={css`
+          flex: 1;
 
-  return <>
-    <header>
-      <nav className={appCSS.nav}>
-        <ul>
-          <li>
-            <h1>
-              nhooyr
-            </h1>
-          </li>
-          <li>
-            <a href="https://github.com/nhooyr">
-              <img src={githubIcon} alt="GitHub profile link"/>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/nhooyr">
-              <img src={twitterIcon} alt="Twitter profile link"/>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          ol {
+            padding: 0;
+            width: 100%;
+          }
 
-    <main className={appCSS.main}>
-      I'm Anmol. I'm a software engineer in Toronto, Canada.
-      This is my personal site and blog.
+          ol li {
+            list-style: none;
+            margin: 30px 0;
+          }
 
-      <ol reversed>
-        {[...Array(10).keys()].reverse().map(i => {
-          i += 1
-          return <li key={i}>
-            {i === 10 ? <h2>2019</h2> : null}
-            {i === 5 ? <h2>2018</h2> : null}
-            <a href="https://example.com">
-              <div className={appCSS.postTitle}>
-                My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas
-              </div>
-              <div className={appCSS.postDate}>
-                May 25
-              </div>
-            </a>
-          </li>
-        })}
-      </ol>
-    </main>
+          ol li a {
+            display: flex;
+            justify-content: space-between;
+          }
 
-    <footer className={appCSS.footer}>
-      <a className={appCSS.contact} href="mailto:hi@nhooyr.io">
-        contact
-      </a>
-    </footer>
+          li a:link {
+            text-decoration: none;
+            color: black;
+          }
 
-  </>
+          li a:active {
+            /*color: blue;*/
+          }
+
+          h2 {
+            font-weight: normal;
+            margin-top: 50px;
+          }
+        `}
+      >
+        I'm Anmol. I'm a software engineer in Toronto, Canada. This is my personal site and blog.
+        <ol reversed>
+          {[...Array(10).keys()].reverse().map(i => {
+            i += 1
+            return (
+              <li key={i}>
+                {i === 10 ? <h2>2019</h2> : null}
+                {i === 5 ? <h2>2018</h2> : null}
+                <a href="https://example.com">
+                  <div
+                    className={css`
+                      flex: 1;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    `}
+                  >
+                    My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas
+                  </div>
+                  <div
+                    className={css`
+                      margin-left: 30px;
+                    `}
+                  >
+                    May 25
+                  </div>
+                </a>
+              </li>
+            )
+          })}
+        </ol>
+      </main>
+
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
