@@ -12,7 +12,6 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "sanitize.css": "^10.0.0",
-    "styled-components": "^4.3.2",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
