@@ -1,4 +1,4 @@
-import { styled } from "linaria/react"
+import styled from "styled-components"
 import React from "react"
 import PlainLink from "./PlainLink"
 
@@ -12,7 +12,7 @@ const PostIndex: React.FC = () => {
             <li key={i}>
               {i === 10 ? <IndexYear y="2019" /> : null}
               {i === 5 ? <IndexYear y="2018" /> : null}
-              <a href="https://example2.com">
+              <a href="https://example.com">
                 <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                 <PostDate>May 25</PostDate>
               </a>
@@ -43,12 +43,12 @@ const Main = styled.main`
   }
 `
 
-const IndexYear: React.FC<{ y: string }> = props => {
-  const H2 = styled.h2`
-    font-weight: normal;
-    margin-top: 50px;
-  `
+const H2 = styled.h2`
+  font-weight: normal;
+  margin-top: 50px;
+`
 
+const IndexYear: React.FC<{ y: string; className?: string }> = props => {
   return (
     <H2 id={props.y}>
       <PlainLink href={`/#${props.y}`}>{props.y}</PlainLink>

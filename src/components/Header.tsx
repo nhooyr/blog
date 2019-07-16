@@ -1,4 +1,4 @@
-import { css } from "linaria"
+import { css } from "styled-components"
 import React from "react"
 import githubIcon from "simple-icons/icons/github.svg"
 import twitterIcon from "simple-icons/icons/twitter.svg"
@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <header>
       <nav
-        className={css`
+        css={css`
           ul {
             display: flex;
             justify-content: space-between;

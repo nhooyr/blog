@@ -1,15 +1,15 @@
-import { css } from "linaria"
+import { css } from "styled-components"
 import React from "react"
 
 const Footer: React.FC = () => {
   return (
     <footer
-      className={css`
+      css={css`
         display: flex;
       `}
     >
       <a
-        className={css`
+        css={css`
           margin-left: auto;
         `}
         href="mailto:hi@nhooyr.io"

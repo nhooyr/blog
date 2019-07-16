@@ -9,9 +9,7 @@ module.exports = function(api) {
         "@babel/preset-env",
         {
           useBuiltIns: "usage",
-          // See https://github.com/callstack/linaria/issues/420#issuecomment-495979153
-          // corejs: 3,
-          corejs: 2,
+          corejs: 3,
         },
       ],
       [
@@ -20,10 +18,10 @@ module.exports = function(api) {
           development: process.env.NODE_ENV === "development",
         },
       ],
-      "linaria/babel",
       "@babel/preset-typescript",
     ],
     plugins: [
+      "babel-plugin-styled-components",
       // Makes class property initialization much nicer.
       "@babel/plugin-proposal-class-properties",
     ],

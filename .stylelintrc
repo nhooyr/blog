@@ -1,12 +1,5 @@
 plugins:
   - stylelint-no-unsupported-browser-features
-rules:
-  selector-pseudo-class-no-unknown:
-    - true
-    - ignorePseudoClasses: ["/^global$/"]
-  # This rule tries to control the CSS insertion order but that makes no sense
-  # as we're using CSS in JS.
-  no-descending-specificity: null
 extends:
-  - stylelint-config-recommended
-  - linaria/stylelint-config
+  - stylelint-config-standard
+  - stylelint-config-styled-components

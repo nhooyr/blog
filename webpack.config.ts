@@ -18,15 +18,7 @@ const config: webpack.Configuration = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: [
-          "babel-loader",
-          {
-            loader: "linaria/loader",
-            options: {
-              sourceMap: dev,
-            },
-          },
-        ],
+        use: ["babel-loader"],
       },
       {
         test: /\.svg$/,
@@ -44,12 +36,6 @@ const config: webpack.Configuration = {
           },
           {
             loader: "css-loader",
-            options: {
-              sourceMap: dev,
-            },
-          },
-          {
-            loader: "postcss-loader",
             options: {
               sourceMap: dev,
             },

@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react"
-import { css } from "linaria"
+import { css } from "styled-components"
 
 const PlainLink: React.FC<{ href: string; children: ReactNode }> = props => {
   return (
     <a
-      className={css`
+      css={css`
         :visited {
           color: black;
         }
