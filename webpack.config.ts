@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import path from "path"
 import TerserPlugin from "terser-webpack-plugin"
+import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import webpack from "webpack"
 
 const prod = process.env.NODE_ENV === "production"
@@ -58,6 +59,7 @@ const config: webpack.Configuration = {
     new ForkTsCheckerWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name]_[contenthash].css",
+      chunkFilename: "[name]_[contenthash].css",
     }),
     // Will make webpack generate the index.html for the bundle.
     new HtmlWebpackPlugin({
@@ -101,6 +103,7 @@ const config: webpack.Configuration = {
           },
         },
       }),
+      new OptimizeCSSAssetsPlugin({})
     ],
   },
 }
