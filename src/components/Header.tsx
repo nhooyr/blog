@@ -1,13 +1,15 @@
-import { css } from "styled-components"
 import React from "react"
 import githubIcon from "simple-icons/icons/github.svg"
 import twitterIcon from "simple-icons/icons/twitter.svg"
-import PlainLink from "./PlainLink"
+import { css } from "styled-components"
 import A from "./A"
+import PlainLink from "./PlainLink"
 
 const App: React.FC = () => {
   return (
-    <header>
+    <header css={css`
+margin-bottom: 15px;
+`}>
       <nav
         css={css`
           ul {
@@ -15,7 +17,7 @@ const App: React.FC = () => {
             justify-content: space-between;
             align-items: center;
             padding: 0;
-            margin: 0 0 20px;
+            margin: 0;
           }
 
           ul li {
@@ -45,12 +47,12 @@ const App: React.FC = () => {
           </li>
           <li>
             <A href="https://github.com/nhooyr">
-              <img src={githubIcon} alt="GitHub profile link" />
+              <img src={githubIcon} alt="GitHub profile link"/>
             </A>
           </li>
           <li>
             <A href="https://twitter.com/nhooyr">
-              <img src={twitterIcon} alt="Twitter profile link" />
+              <img src={twitterIcon} alt="Twitter profile link"/>
             </A>
           </li>
         </ul>

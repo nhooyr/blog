@@ -4,14 +4,12 @@ import A from "./A"
 
 const Footer: React.FC = () => {
   return (
-    <footer
-      css={css`
-        display: flex;
-      `}
-    >
+    <footer css={css`
+margin-top: 35px;
+`}>
       <A
         css={css`
-          margin-left: auto;
+          float: right;
         `}
         href="mailto:hi@nhooyr.io"
       >
