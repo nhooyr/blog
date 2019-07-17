@@ -1,7 +1,7 @@
 import React from "react"
-import githubIcon from "simple-icons/icons/github.svg"
-import twitterIcon from "simple-icons/icons/twitter.svg"
-import { css } from "styled-components"
+import GithubIcon from "simple-icons/icons/github.svg"
+import TwitterIcon from "simple-icons/icons/twitter.svg"
+import styled, { css } from "styled-components"
 import A from "./A"
 import PlainLink from "./PlainLink"
 
@@ -47,12 +47,12 @@ margin-bottom: 15px;
           </li>
           <li>
             <A href="https://github.com/nhooyr">
-              <img src={githubIcon} alt="GitHub profile link"/>
+              <StyledGithubIcon/>
             </A>
           </li>
           <li>
             <A href="https://twitter.com/nhooyr">
-              <img src={twitterIcon} alt="Twitter profile link"/>
+              <StyledTwitterIcon/>
             </A>
           </li>
         </ul>
@@ -60,5 +60,15 @@ margin-bottom: 15px;
     </header>
   )
 }
+
+const StyledGithubIcon = styled(GithubIcon)`
+width: 24px;
+  height: 100%;
+`
+
+const StyledTwitterIcon = styled(TwitterIcon)`
+  width: 24px;
+  height: 100%;
+`
 
 export default App

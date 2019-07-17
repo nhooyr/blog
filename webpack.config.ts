@@ -2,9 +2,9 @@ import { CleanWebpackPlugin } from "clean-webpack-plugin"
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import path from "path"
 import TerserPlugin from "terser-webpack-plugin"
-import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import webpack from "webpack"
 
 const prod = process.env.NODE_ENV === "production"
@@ -23,7 +23,14 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.svg$/,
-        use: "url-loader",
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              icon: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -103,7 +110,7 @@ const config: webpack.Configuration = {
           },
         },
       }),
-      new OptimizeCSSAssetsPlugin({})
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
 }

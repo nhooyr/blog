@@ -64,7 +64,7 @@ const H2 = styled.h2`
   font-weight: normal;
 `
 
-const IndexYear: React.FC<{ y: string; className?: string }> = props => {
+const IndexYear: React.FC<{ y: string}> = props => {
   return (
     <H2 id={props.y}>
       <PlainLink href={`/#${props.y}`}>{props.y}</PlainLink>
