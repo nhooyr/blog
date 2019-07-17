@@ -4,9 +4,11 @@ import A from "./A"
 
 const Footer: React.FC = () => {
   return (
-    <footer css={css`
-margin-top: 35px;
-`}>
+    <footer
+      css={css`
+        margin-top: 35px;
+      `}
+    >
       <A
         css={css`
           float: right;

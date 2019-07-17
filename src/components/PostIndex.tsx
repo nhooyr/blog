@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import A from "./A"
-import PlainLink from "./PlainLink"
 
 const PostIndex: React.FC = () => {
   return (
     <>
       <div>
-        <IndexYear y="2019"/>
+        <IndexYear y="2019" />
         <OL reversed>
           {[...Array(10).keys()].reverse().map(i => {
             i += 1
@@ -24,7 +23,7 @@ const PostIndex: React.FC = () => {
       </div>
 
       <div>
-        <IndexYear y="2018"/>
+        <IndexYear y="2018" />
         <OL reversed>
           {[...Array(10).keys()].reverse().map(i => {
             i += 1
@@ -44,30 +43,32 @@ const PostIndex: React.FC = () => {
 }
 
 const OL = styled.ol`
-padding: 0;
-margin: 0;
-width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 `
 
 const LI = styled.li`
-list-style: none;
-margin: 20px 0;
+  list-style: none;
+  margin: 20px 0;
 
-${A} {
-  display: flex;
-  justify-content: space-between;
-}
+  ${A} {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
-const H2 = styled.h2`  
+const H2 = styled.h2`
   margin: 0;
   font-weight: normal;
 `
 
-const IndexYear: React.FC<{ y: string}> = props => {
+const IndexYear: React.FC<{ y: string }> = props => {
   return (
     <H2 id={props.y}>
-      <PlainLink href={`/#${props.y}`}>{props.y}</PlainLink>
+      <A href={`/#${props.y}`} visitable={false}>
+        {props.y}
+      </A>
     </H2>
   )
 }

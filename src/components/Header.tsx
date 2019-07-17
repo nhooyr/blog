@@ -3,13 +3,14 @@ import GithubIcon from "simple-icons/icons/github.svg"
 import TwitterIcon from "simple-icons/icons/twitter.svg"
 import styled, { css } from "styled-components"
 import A from "./A"
-import PlainLink from "./PlainLink"
 
 const App: React.FC = () => {
   return (
-    <header css={css`
-margin-bottom: 15px;
-`}>
+    <header
+      css={css`
+        margin-bottom: 15px;
+      `}
+    >
       <nav
         css={css`
           ul {
@@ -42,18 +43,20 @@ margin-bottom: 15px;
         <ul>
           <li>
             <h1>
-              <PlainLink href="/">nhooyr</PlainLink>
+              <A href="/" visitable={false}>
+                nhooyr
+              </A>
             </h1>
           </li>
           <li>
-            <A href="https://github.com/nhooyr">
-              <StyledGithubIcon/>
-            </A>
+            <Icon href="https://github.com/nhooyr">
+              <GithubIcon />
+            </Icon>
           </li>
           <li>
-            <A href="https://twitter.com/nhooyr">
-              <StyledTwitterIcon/>
-            </A>
+            <Icon href="https://reddit.com/u/nhooyr">
+              <TwitterIcon />
+            </Icon>
           </li>
         </ul>
       </nav>
@@ -61,14 +64,19 @@ margin-bottom: 15px;
   )
 }
 
-const StyledGithubIcon = styled(GithubIcon)`
-width: 24px;
-  height: 100%;
-`
+const Icon: React.FC<{ href: string }> = (props): JSX.Element => {
+  return (
+    <StyledIcon href={props.href} visitable={false}>
+      {props.children}
+    </StyledIcon>
+  )
+}
 
-const StyledTwitterIcon = styled(TwitterIcon)`
-  width: 24px;
-  height: 100%;
+const StyledIcon = styled(A)`
+  svg {
+    width: 24px;
+    height: 100%;
+  }
 `
 
 export default App

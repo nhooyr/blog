@@ -23,14 +23,7 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.svg$/,
-        use: [
-          {
-            loader: "@svgr/webpack",
-            options: {
-              icon: true,
-            },
-          },
-        ],
+        use: "@svgr/webpack",
       },
       {
         test: /\.css$/,
