@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import React from "react"
+import A from "./A"
 import PlainLink from "./PlainLink"
 
 const PostIndex: React.FC = () => {
@@ -12,10 +13,10 @@ const PostIndex: React.FC = () => {
             <li key={i}>
               {i === 10 ? <IndexYear y="2019" /> : null}
               {i === 5 ? <IndexYear y="2018" /> : null}
-              <a href="https://example.com">
+              <A href="https://example.com">
                 <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                 <PostDate>May 25</PostDate>
-              </a>
+              </A>
             </li>
           )
         })}

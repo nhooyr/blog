@@ -1,5 +1,6 @@
 import { css } from "styled-components"
 import React from "react"
+import A from "./A"
 
 const Footer: React.FC = () => {
   return (
@@ -8,14 +9,14 @@ const Footer: React.FC = () => {
         display: flex;
       `}
     >
-      <a
+      <A
         css={css`
           margin-left: auto;
         `}
         href="mailto:hi@nhooyr.io"
       >
         contact
-      </a>
+      </A>
     </footer>
   )
 }

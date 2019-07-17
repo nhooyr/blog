@@ -3,6 +3,7 @@ import React from "react"
 import githubIcon from "simple-icons/icons/github.svg"
 import twitterIcon from "simple-icons/icons/twitter.svg"
 import PlainLink from "./PlainLink"
+import A from "./A"
 
 const App: React.FC = () => {
   return (
@@ -43,14 +44,14 @@ const App: React.FC = () => {
             </h1>
           </li>
           <li>
-            <a href="https://github.com/nhooyr">
+            <A href="https://github.com/nhooyr">
               <img src={githubIcon} alt="GitHub profile link" />
-            </a>
+            </A>
           </li>
           <li>
-            <a href="https://twitter.com/nhooyr">
+            <A href="https://twitter.com/nhooyr">
               <img src={twitterIcon} alt="Twitter profile link" />
-            </a>
+            </A>
           </li>
         </ul>
       </nav>
