@@ -1,17 +1,40 @@
 [build]
-	base = "."
-	publish = "out"
-	command = "./ci/netlify-deploy.sh"
+base = "."
+publish = "out"
+command = "./ci/netlify-deploy.sh"
 
 [[redirects]]
-  from = "/websocket*"
-  to = "/websocket.html"
-  query = { go-get = "1" }
-  status = 200
+from = "/websocket"
+to = "/websocket.html"
+query = { go-get = "1" }
+status = 200
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
+from = "/websocket/wsjson"
+to = "/websocket.html"
+query = { go-get = "1" }
+status = 200
 
+[[redirects]]
+from = "/websocket/wspb"
+to = "/websocket.html"
+query = { go-get = "1" }
+status = 200
+
+[[redirects]]
+from = "/*"
+to = "/404.html"
+force = true
+query = { go-get = "1" }
+status = 404
+
+[[redirects]]
+from = "/websocket*"
+to = "https://github.com/nhooyr/websocket"
+force = true
+status = 301
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

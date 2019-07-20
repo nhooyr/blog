@@ -6,6 +6,7 @@ import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import path from "path"
 import TerserPlugin from "terser-webpack-plugin"
 import webpack from "webpack"
+import CopyPlugin from "copy-webpack-plugin"
 
 const prod = process.env.NODE_ENV === "production"
 const dev = !prod
@@ -75,6 +76,7 @@ const config: webpack.Configuration = {
         useShortDoctype: true,
       },
     }),
+    new CopyPlugin([{ from: "public/", to: "." }]),
   ],
   resolve: {
     // The javascript extensions for importing.
