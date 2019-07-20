@@ -7,6 +7,7 @@ import styled from "styled-components"
 const App: React.FC = () => {
   return (
     <AppContainer>
+
       <Header />
       <Main>
         <p>
@@ -18,7 +19,7 @@ const App: React.FC = () => {
         </p>
         <PostIndex />
       </Main>
-      <Footer />
+      {/*<Footer />*/}
     </AppContainer>
   )
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
+import MailIcon from "simple-icons/icons/minutemailer.svg"
 import TwitterIcon from "simple-icons/icons/twitter.svg"
 import styled, { css } from "styled-components"
 import A from "./A"
@@ -33,9 +34,12 @@ const App: React.FC = () => {
           ul li img {
             width: 24px;
           }
+          
+          ul li + li {
+            margin-left: 20px;
+          }
 
-          ul li:not(:first-child):not(:last-child) {
-            margin-right: 20px;
+          ul li:nth-child(2) {
             margin-left: auto;
           }
         `}
@@ -50,12 +54,17 @@ const App: React.FC = () => {
           </li>
           <li>
             <Icon href="https://github.com/nhooyr">
-              <GithubIcon />
+              <GithubIcon/>
             </Icon>
           </li>
           <li>
-            <Icon href="https://reddit.com/u/nhooyr">
-              <TwitterIcon />
+            <Icon href="https://twitter.com/nhooyr">
+              <TwitterIcon/>
+            </Icon>
+          </li>
+          <li>
+            <Icon href="mailto:hi@nhooyr.io">
+              <MailIcon/>
             </Icon>
           </li>
         </ul>
