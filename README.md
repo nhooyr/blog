@@ -6,3 +6,9 @@
 https://nhooyr.io
 
 My personal site.
+
+Built with React, Typescript, Styled Components, Jest, Netlify and Babel. 
+
+I have tried to follow every best practice I can think of. This site was an
+exercise for me in trying to create the best frontend site I possibly
+could for my blog. Will follow up with a blog post soon. 
