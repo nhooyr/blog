@@ -34,7 +34,7 @@ const App: React.FC = () => {
           ul li img {
             width: 24px;
           }
-          
+
           ul li + li {
             margin-left: 20px;
           }
@@ -54,17 +54,17 @@ const App: React.FC = () => {
           </li>
           <li>
             <Icon href="https://github.com/nhooyr">
-              <GithubIcon/>
+              <GithubIcon />
             </Icon>
           </li>
           <li>
             <Icon href="https://twitter.com/nhooyr">
-              <TwitterIcon/>
+              <TwitterIcon />
             </Icon>
           </li>
           <li>
             <Icon href="mailto:hi@nhooyr.io">
-              <MailIcon/>
+              <MailIcon />
             </Icon>
           </li>
         </ul>

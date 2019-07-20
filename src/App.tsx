@@ -1,13 +1,11 @@
 import React from "react"
 import Header from "./components/Header"
-import Footer from "./components/Footer"
 import PostIndex from "./components/PostIndex"
 import styled from "styled-components"
 
 const App: React.FC = () => {
   return (
     <AppContainer>
-
       <Header />
       <Main>
         <p>
@@ -19,7 +17,6 @@ const App: React.FC = () => {
         </p>
         <PostIndex />
       </Main>
-      {/*<Footer />*/}
     </AppContainer>
   )
 }

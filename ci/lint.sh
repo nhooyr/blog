@@ -9,7 +9,7 @@ if [[ $CI ]]; then
 fi
 
 # shellcheck disable=SC2046
-eslint --fix $(git ls-files "*.ts" "*.tsx" "*.js")
+eslint --max-warnings=0 --fix $(git ls-files "*.ts" "*.tsx" "*.js")
 # shellcheck disable=SC2046
 stylelint --fix $(git ls-files "*.js" "*.ts" "*.tsx")
 # shellcheck disable=SC2046
