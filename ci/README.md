@@ -1,5 +1,4 @@
 # CI
 
-This directory contains the CI scripts, local and remote.
-
-See the `.gitlab-ci.yml` at the root of the repository for the remote CI.
+This directory contains the CI scripts. Any of these scripts can be ran locally.
+See `.circleci/config.yml` for the remote CI configuration.

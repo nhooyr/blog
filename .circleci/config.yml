@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:12.6.0
     steps:
@@ -15,7 +15,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: sudo yarn ci
+      - run: sudo -E yarn ci
 
       - save_cache:
           paths:
@@ -26,3 +26,9 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
