@@ -7,4 +7,5 @@ export CI=${CI:-}
 
 if [[ $CI ]]; then
   export DEBIAN_FRONTEND=noninteractive
+  yarn install --frozen-lockfile --silent
 fi

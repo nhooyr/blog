@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  deps:
+  ci:
     docker:
       - image: circleci/node:12.6.0
     steps:
@@ -10,51 +10,15 @@ jobs:
             - dependencies-{{ checksum "yarn.lock" }}
             # Fallback to using the latest cache if no exact match is found.
             - dependencies-
-      - run: yarn install --frozen-lockfile --silent
+      - run: sudo -E yarn ci
       - save_cache:
           paths:
             - node_modules
             - ~/.cache/yarn
           key: dependencies-{{ checksum "yarn.lock" }}
-      - persist_to_workspace:
-          root: .
-          paths: .
-
-  fmt:
-    docker:
-      - image: circleci/node:12.6.0
-    steps:
-      - attach_workspace:
-          at: .
-      - run: sudo -E yarn fmt
-
-  lint:
-    docker:
-      - image: circleci/node:12.6.0
-    steps:
-      - attach_workspace:
-          at: .
-      - run: sudo -E yarn lint
-
-  test:
-    docker:
-      - image: circleci/node:12.6.0
-    steps:
-      - attach_workspace:
-          at: .
-      - run: sudo -E yarn test
 
 workflows:
   version: 2
   ci:
     jobs:
-      - deps
-      - fmt:
-          requires:
-            - deps
-      - lint:
-          requires:
-            - deps
-      - test:
-          requires:
-            - deps
+      - ci
