@@ -4,8 +4,8 @@ set -euo pipefail
 source ci/lib.sh
 
 if [[ $CI ]]; then
-  apt-get update
-  apt install -y shellcheck
+  apt-get -qq update
+  apt-get -qq install -y shellcheck
 fi
 
 # shellcheck disable=SC2046
