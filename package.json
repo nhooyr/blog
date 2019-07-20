@@ -3,9 +3,9 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server",
     "prod": "NODE_ENV=production webpack",
-    "fmt": "./ci/steps/fmt.sh",
-    "lint": "./ci/steps/lint.sh",
-    "test": "./ci/steps/test.sh",
+    "fmt": "./ci/fmt.sh",
+    "lint": "./ci/lint.sh",
+    "test": "./ci/test.sh",
     "fix": "yarn fmt && yarn lint",
     "ci": "yarn fix && yarn test"
   },

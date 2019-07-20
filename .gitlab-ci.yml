@@ -1,0 +1,9 @@
+default:
+  image: node:latest
+
+fmt:
+  script: yarn -s fmt
+lint:
+  script: yarn -s lint
+test:
+  script: yarn -s test

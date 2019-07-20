@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-cd "$(dirname "$0")"
-cd "$(git rev-parse --show-toplevel)"
 source ci/lib.sh
+
+if [[ $CI ]]; then
+  curl -L https://github.com/mvdan/sh/releases/download/v2.6.4/shfmt_v2.6.4_linux_amd64 > /usr/local/bin/shfmt
+  chmod +x /usr/local/bin/shfmt
+fi
 
 # shellcheck disable=SC2046
 prettier --loglevel=warn --write $(git ls-files "*.js" "*.ts" "*.tsx" "*.html" "*.json" "*.css" "*.md" "*.toml")
