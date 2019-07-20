@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+yarn --version
 ./ci/fix.sh
 
 echo "-- running test"
