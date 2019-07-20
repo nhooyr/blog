@@ -6,6 +6,6 @@ set -euo pipefail
 export CI=${CI:-}
 
 if [[ $CI ]]; then
-	export DEBIAN_FRONTEND=noninteractive
+  export DEBIAN_FRONTEND=noninteractive
   yarn install --frozen-lockfile --silent
 fi

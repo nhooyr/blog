@@ -6,8 +6,8 @@
     "fmt": "./ci/fmt.sh",
     "lint": "./ci/lint.sh",
     "test": "./ci/test.sh",
-    "fix": "yarn fmt && yarn lint",
-    "ci": "yarn fix && yarn test"
+    "fix": "./ci/fix.sh",
+    "ci": "./ci/ci.sh"
   },
   "dependencies": {
     "@types/optimize-css-assets-webpack-plugin": "^1.3.4",
