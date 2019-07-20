@@ -1,7 +1,7 @@
 [build]
 base = "."
 publish = "out"
-command = "./ci/netlify-deploy.sh"
+command = "yarn prod"
 
 [[redirects]]
 from = "/websocket"

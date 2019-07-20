@@ -3,5 +3,6 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 cd "$(git rev-parse --show-toplevel)"
+source ci/lib.sh
 
-yarn prod
+jest --onlyChanged
