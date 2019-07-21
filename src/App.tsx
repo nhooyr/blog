@@ -18,9 +18,9 @@ const App: React.FC = (): ReactElement => {
               component={(): ReactElement => (
                 <>
                   <p>
-                    Hi, I'm Anmol.
+                    {"Hi, I'm Anmol."}
                     <br />
-                    I'm a software engineer in Toronto, Canada.
+                    {"I'm a software engineer in Toronto, Canada."}
                     <br />
                     This is my personal site and blog.
                   </p>
