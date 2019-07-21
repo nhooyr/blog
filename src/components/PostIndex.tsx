@@ -1,41 +1,45 @@
-import React from "react"
+import React, { ReactElement } from "react"
 import styled from "styled-components"
 import A from "./A"
 
-const PostIndex: React.FC = () => {
+const PostIndex: React.FC = (): ReactElement => {
   return (
     <>
       <div>
         <IndexYear y="2019" />
         <OL reversed>
-          {[...Array(10).keys()].reverse().map(i => {
-            i += 1
-            return (
-              <LI key={i}>
-                <A href="https://example.com">
-                  <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
-                  <PostDate>May 25</PostDate>
-                </A>
-              </LI>
-            )
-          })}
+          {[...Array(10).keys()].reverse().map(
+            (i): ReactElement => {
+              i += 1
+              return (
+                <LI key={i}>
+                  <A href="https://example.com">
+                    <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
+                    <PostDate>May 25</PostDate>
+                  </A>
+                </LI>
+              )
+            },
+          )}
         </OL>
       </div>
 
       <div>
         <IndexYear y="2018" />
         <OL reversed>
-          {[...Array(10).keys()].reverse().map(i => {
-            i += 1
-            return (
-              <LI key={i}>
-                <A href="https://example.com">
-                  <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
-                  <PostDate>May 25</PostDate>
-                </A>
-              </LI>
-            )
-          })}
+          {[...Array(10).keys()].reverse().map(
+            (i): ReactElement => {
+              i += 1
+              return (
+                <LI key={i}>
+                  <A href="https://example.com">
+                    <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
+                    <PostDate>May 25</PostDate>
+                  </A>
+                </LI>
+              )
+            },
+          )}
         </OL>
       </div>
     </>
@@ -63,7 +67,7 @@ const H2 = styled.h2`
   font-weight: normal;
 `
 
-const IndexYear: React.FC<{ y: string }> = props => {
+const IndexYear: React.FC<{ y: string }> = (props): ReactElement => {
   return (
     <H2 id={props.y}>
       <A href={`/#${props.y}`} visitable={false}>

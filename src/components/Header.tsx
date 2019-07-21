@@ -1,11 +1,11 @@
-import React from "react"
+import React, { ReactElement } from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
 import TwitterIcon from "simple-icons/icons/twitter.svg"
 import styled, { css } from "styled-components"
 import A from "./A"
 
-const App: React.FC = () => {
+const App: React.FC = (): ReactElement => {
   return (
     <header
       css={css`
@@ -26,11 +26,6 @@ const App: React.FC = () => {
             list-style: none;
           }
 
-          ul li h1 {
-            font-weight: normal;
-            margin: 0;
-          }
-
           ul li img {
             width: 24px;
           }
@@ -46,7 +41,12 @@ const App: React.FC = () => {
       >
         <ul>
           <li>
-            <h1>
+            <h1
+              css={css`
+                font-weight: normal;
+                margin: 0;
+              `}
+            >
               <A href="/" visitable={false}>
                 nhooyr
               </A>
@@ -73,7 +73,7 @@ const App: React.FC = () => {
   )
 }
 
-const Icon: React.FC<{ href: string }> = (props): JSX.Element => {
+const Icon: React.FC<{ href: string }> = (props): ReactElement => {
   return (
     <StyledIcon href={props.href} visitable={false}>
       {props.children}
