@@ -9,8 +9,8 @@ My personal site.
 
 Built with React, Typescript, Styled Components, Jest, Netlify and Babel.
 
-I have tried to follow every best practice I can think of. This site was an
-exercise for me in trying to create the best frontend site I possibly
-could.
+My goal with this site has been to maximize performance, developer UX and
+especially code quality. I wanted to learn what a modern React + Typescript
+frontend with zero corners cut looks like.
 
 Will follow up with a blog post soon.
