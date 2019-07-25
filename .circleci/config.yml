@@ -50,7 +50,7 @@ jobs:
             - node_modules
             - ~/.cache/yarn
           key: dependencies-{{ checksum "yarn.lock" }}
-          
+
 workflows:
   version: 2
   fmt:

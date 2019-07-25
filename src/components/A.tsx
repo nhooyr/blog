@@ -1,4 +1,7 @@
 import styled from "styled-components"
+// import React from "react"
+
+// const Link: React.FC = (): => {}
 
 const A = styled.a<{ visitable?: boolean }>`
   :link {
@@ -7,7 +10,7 @@ const A = styled.a<{ visitable?: boolean }>`
   }
 
   :visited {
-    color: ${props => (props.visitable ? "purple" : "black")};
+    color: ${(props): string => (props.visitable ? "purple" : "black")};
   }
 
   :active {

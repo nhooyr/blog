@@ -1,25 +1,37 @@
-import React from "react"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import PostIndex from "./components/PostIndex"
+import React, { ReactElement } from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 import styled from "styled-components"
+import Header from "./components/Header"
+import PostIndex from "./components/PostIndex"
+import Post from "./components/Post"
 
-const App: React.FC = () => {
+const App: React.FC = (): ReactElement => {
   return (
-    <AppContainer>
-      <Header />
-      <Main>
-        <p>
-          Hi, I'm Anmol.
-          <br />
-          I'm a software engineer in Toronto, Canada.
-          <br />
-          This is my personal site and blog.
-        </p>
-        <PostIndex />
-      </Main>
-      <Footer />
-    </AppContainer>
+    <BrowserRouter>
+      <AppContainer>
+        <Header />
+        <Main>
+          <Switch>
+            <Route path="/post" component={Post} />
+            <Route
+              path="/"
+              component={(): ReactElement => (
+                <>
+                  <p>
+                    {"Hi, I'm Anmol."}
+                    <br />
+                    {"I'm a software engineer in Toronto, Canada."}
+                    <br />
+                    This is my personal site and blog.
+                  </p>
+                  <PostIndex />
+                </>
+              )}
+            />
+          </Switch>
+        </Main>
+      </AppContainer>
+    </BrowserRouter>
   )
 }
 
