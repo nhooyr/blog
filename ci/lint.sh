@@ -5,7 +5,7 @@ source ci/lib.sh
 
 if [[ $CI ]]; then
   apt-get -qq update
-  apt-get -qq install -y shellcheck
+  apt-get -qq install shellcheck
 fi
 
 # shellcheck disable=SC2046
