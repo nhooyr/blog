@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
 import styled from "styled-components"
 import Header from "./components/Header"
-import PostIndex from "./components/PostIndex"
 import Post from "./components/Post"
+import PostIndex from "./components/PostIndex"
 
 const App: React.FC = (): ReactElement => {
   return (
@@ -15,6 +15,7 @@ const App: React.FC = (): ReactElement => {
             <Route path="/post" component={Post} />
             <Route
               path="/"
+              exact
               component={(): ReactElement => (
                 <>
                   <p>
@@ -28,6 +29,7 @@ const App: React.FC = (): ReactElement => {
                 </>
               )}
             />
+            <Redirect from="/" to="/" />
           </Switch>
         </Main>
       </AppContainer>
@@ -47,12 +49,14 @@ const AppContainer = styled.div`
   max-width: 650px;
   min-width: 320px;
   margin: auto;
+
+  line-height: 1.8;
 `
 
 const Main = styled.main`
   flex: 1;
 
   > * + * {
-    margin-top: 45px;
+    margin-top: 30px;
   }
 `

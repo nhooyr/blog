@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 import styled from "styled-components"
-import A from "./A"
+import { InternalLink } from "./Link"
 
 const PostIndex: React.FC = (): ReactElement => {
   return (
@@ -13,10 +13,10 @@ const PostIndex: React.FC = (): ReactElement => {
               i += 1
               return (
                 <LI key={i}>
-                  <A href="https://example.com">
+                  <InternalLink to="/post">
                     <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                     <PostDate>May 25</PostDate>
-                  </A>
+                  </InternalLink>
                 </LI>
               )
             },
@@ -32,10 +32,10 @@ const PostIndex: React.FC = (): ReactElement => {
               i += 1
               return (
                 <LI key={i}>
-                  <A href="https://example.com">
+                  <InternalLink to="/post">
                     <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                     <PostDate>May 25</PostDate>
-                  </A>
+                  </InternalLink>
                 </LI>
               )
             },
@@ -56,7 +56,7 @@ const LI = styled.li`
   list-style: none;
   margin: 20px 0;
 
-  ${A} {
+  ${InternalLink} {
     display: flex;
     justify-content: space-between;
   }
@@ -70,9 +70,9 @@ const H2 = styled.h2`
 const IndexYear: React.FC<{ y: string }> = (props): ReactElement => {
   return (
     <H2 id={props.y}>
-      <A href={`/#${props.y}`} visitable={false}>
+      <InternalLink to={`/#${props.y}`} visitable={false}>
         {props.y}
-      </A>
+      </InternalLink>
     </H2>
   )
 }

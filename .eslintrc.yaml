@@ -31,6 +31,12 @@ settings:
     version: detect
 
 rules:
+  # This rule is just dumb.
+  "@typescript-eslint/no-use-before-define": off
+  "@typescript-eslint/explicit-function-return-type": off
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: warn
-  react/prop-types: 0
+  react/prop-types: off
+  import/named: off # Typescript handles this for us.
+  jsx-a11y/anchor-has-content: off # Doesn't work well with React.
+  import/no-duplicates: off # https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md#when-not-to-use-it
