@@ -1,0 +1,25 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  fmt:
+    runs-on: ubuntu-latest
+    container: node
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn && yarn fmt
+  lint:
+    runs-on: ubuntu-latest
+    container: node
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn && yarn lint
+  test:
+    runs-on: ubuntu-latest
+    container: node
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn && yarn test
+      - uses: coverallsapp/github-action@v1.0.1
+        with:
+          github-token: ${{ secrets.github_token }}
