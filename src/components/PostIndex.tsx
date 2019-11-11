@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { InternalLink } from "./Link"
 
 const PostIndex: React.FC = (): ReactElement => {

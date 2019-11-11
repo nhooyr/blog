@@ -1,8 +1,7 @@
-// derived from https://github.com/facebook/create-react-app/blob/master/packages/babel-preset-react-app/create.js
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-module.exports = function(api) {
-  api.cache.never()
+module.exports = (api) => {
+  api.cache.forever()
 
+  const dev = process.env.NODE_ENV === "development"
   return {
     presets: [
       [
@@ -15,15 +14,20 @@ module.exports = function(api) {
       [
         "@babel/preset-react",
         {
-          development: process.env.NODE_ENV === "development",
+          development: dev,
         },
       ],
       "@babel/preset-typescript",
+      "@emotion/babel-preset-css-prop",
     ],
     plugins: [
-      "babel-plugin-styled-components",
-      // Makes class property initialization much nicer.
-      "@babel/plugin-proposal-class-properties",
-    ],
+      [
+        "emotion",
+        {
+          sourceMap: dev
+        }
+      ],
+      "@babel/plugin-proposal-class-properties"
+    ]
   }
 }

@@ -1,5 +1,0 @@
-plugins:
-  - stylelint-no-unsupported-browser-features
-extends:
-  - stylelint-config-standard
-  - stylelint-config-styled-components

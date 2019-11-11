@@ -2,7 +2,8 @@ import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
 import TwitterIcon from "simple-icons/icons/twitter.svg"
-import styled, { css } from "styled-components"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 import { ExternalLink, InternalLink } from "./Link"
 
 const App: React.FC = () => {
@@ -34,7 +35,7 @@ const App: React.FC = () => {
             margin-left: 20px;
           }
 
-          ul li:nth-child(2) {
+          ul li:nth-of-type(2) {
             margin-left: auto;
           }
         `}

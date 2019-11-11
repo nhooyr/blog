@@ -1,4 +1,3 @@
-# eslint config is from https://github.com/facebook/create-react-app/blob/45197e67fd5ff4c0fa315ec7d91eead354e4bdd8/packages/eslint-config-react-app/index.js
 parser: "@typescript-eslint/parser"
 env:
   browser: true
@@ -14,14 +13,12 @@ parserOptions:
     jsx: true
 
 extends:
-  - eslint:recommended # Enables recommended rules.
-  - plugin:import/recommended # https://www.npmjs.com/package/eslint-plugin-import#typescript
-  - plugin:import/typescript # https://www.npmjs.com/package/eslint-plugin-import#typescript
-  - plugin:react/recommended # https://www.npmjs.com/package/eslint-plugin-react
-  - plugin:@typescript-eslint/recommended # https://github.com/typescript-eslint/typescript-eslint
-  - prettier/@typescript-eslint # # https://www.npmjs.com/package/eslint-config-prettier
-  - prettier # https://www.npmjs.com/package/eslint-config-prettier
-  - plugin:jsx-a11y/strict # https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier/@typescript-eslint
+  - prettier
+  - plugin:jsx-a11y/strict
 
 plugins:
   - react-hooks
@@ -31,12 +28,8 @@ settings:
     version: detect
 
 rules:
-  # This rule is just dumb.
   "@typescript-eslint/no-use-before-define": off
   "@typescript-eslint/explicit-function-return-type": off
   react-hooks/rules-of-hooks: error
-  react-hooks/exhaustive-deps: warn
+  react-hooks/exhaustive-deps: error
   react/prop-types: off
-  import/named: off # Typescript handles this for us.
-  jsx-a11y/anchor-has-content: off # Doesn't work well with React.
-  import/no-duplicates: off # https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md#when-not-to-use-it
