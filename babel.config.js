@@ -1,4 +1,4 @@
-module.exports = (api) => {
+module.exports = api => {
   api.cache.forever()
 
   const dev = process.env.NODE_ENV === "development"
@@ -24,10 +24,10 @@ module.exports = (api) => {
       [
         "emotion",
         {
-          sourceMap: dev
-        }
+          sourceMap: dev,
+        },
       ],
-      "@babel/plugin-proposal-class-properties"
-    ]
+      "@babel/plugin-proposal-class-properties",
+    ],
   }
 }

@@ -33,11 +33,15 @@ function linkStyles(props: LinkProps) {
 }
 
 // TODO it'd be nice to figure out at some point how to abstract away stripping a prop.
-export const InternalLink = styled((props: RouterLinkProps) => <Link {...{
-  ...props,
-  visitable: undefined,
-}} />)<LinkProps>(linkStyles)
+export const InternalLink = styled((props: RouterLinkProps) => (
+  <Link
+    {...{
+      ...props,
+      visitable: undefined,
+    }}
+  />
+))<LinkProps>(linkStyles)
 
 export const ExternalLink = styled((props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <a {...{...props, visitable: undefined}}>{props.children}</a>
+  <a {...{ ...props, visitable: undefined }}>{props.children}</a>
 ))<LinkProps>(linkStyles)

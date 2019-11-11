@@ -1,0 +1,6 @@
+plugins:
+  - stylelint-no-unsupported-browser-features
+extends:
+  - stylelint-config-recommended
+  - stylelint-config-styled-components
+  - stylelint-config-prettier

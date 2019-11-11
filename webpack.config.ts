@@ -3,8 +3,9 @@ import CopyPlugin from "copy-webpack-plugin"
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import path from "path"
+import webpack from "webpack"
 
-export default (env: {}, argv: {mode: string}) => {
+export default (env: {}, argv: { mode: string }): webpack.Configuration => {
   const dev = argv.mode !== "production"
 
   return {
@@ -22,13 +23,12 @@ export default (env: {}, argv: {mode: string}) => {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"]
-        }
+          use: ["style-loader", "css-loader"],
+        },
       ],
     },
     output: {
       filename: "[name]_[contenthash].js",
-      chunkFilename: "[name]_[contenthash].js",
       path: path.resolve("out"),
     },
     devtool: dev ? "eval-source-map" : undefined,
@@ -38,7 +38,7 @@ export default (env: {}, argv: {mode: string}) => {
       new HtmlWebpackPlugin({
         title: "nhooyr.io",
       }),
-      new CopyPlugin([{from: "public/", to: "."}]),
+      new CopyPlugin([{ from: "public/", to: "." }]),
     ],
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
