@@ -1,16 +1,16 @@
+import { css } from "@emotion/core"
 import React, { ReactElement } from "react"
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
-import styled from "@emotion/styled"
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom"
 import Header from "./components/Header"
 import Post from "./components/Post"
 import PostIndex from "./components/PostIndex"
 
 const App: React.FC = (): ReactElement => {
   return (
-    <BrowserRouter>
-      <AppContainer>
+    <div css={appContainerCSS}>
+      <BrowserRouter>
         <Header />
-        <Main>
+        <main css={mainCSS}>
           <Switch>
             <Route path="/post" component={Post} />
             <Route
@@ -31,29 +31,34 @@ const App: React.FC = (): ReactElement => {
             />
             <Redirect from="/" to="/" />
           </Switch>
-        </Main>
-      </AppContainer>
-    </BrowserRouter>
+        </main>
+      </BrowserRouter>
+    </div>
   )
 }
 
 export default App
 
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+const appContainerCSS = css`
+  color: #333;
 
-  word-wrap: break-word;
-  padding: 20px 20px;
-  max-width: 650px;
-  min-width: 320px;
-  margin: auto;
+  h1 {
+    color: black;
+  }
 
   line-height: 1.8;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 40px;
+  max-width: 750px;
+  min-width: 320px;
+
+  margin: auto;
 `
 
-const Main = styled.main`
+const mainCSS = css`
   flex: 1;
 
   > * + * {

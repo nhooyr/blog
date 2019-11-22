@@ -1,3 +1,5 @@
+rules:
+  property-no-unknown: null
 plugins:
   - stylelint-no-unsupported-browser-features
 extends:

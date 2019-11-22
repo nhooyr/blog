@@ -1,7 +1,10 @@
 import { CleanWebpackPlugin } from "clean-webpack-plugin"
 import CopyPlugin from "copy-webpack-plugin"
+import TerserPlugin from "terser-webpack-plugin"
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import OptimizeCssAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import path from "path"
 import webpack from "webpack"
 
@@ -23,7 +26,21 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                sourceMap: dev,
+                hmr: dev,
+              },
+            },
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: dev,
+              },
+            },
+          ],
         },
       ],
     },
@@ -39,12 +56,29 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
         title: "nhooyr.io",
       }),
       new CopyPlugin([{ from: "public/", to: "." }]),
+      new MiniCssExtractPlugin({
+        filename: "[name]_[contenthash].css",
+      }),
+      new OptimizeCssAssetsPlugin(),
     ],
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
     },
     devServer: {
       historyApiFallback: true,
+      writeToDisk: true,
+    },
+    optimization: {
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            output: {
+              comments: false,
+            },
+          },
+          extractComments: false,
+        }),
+      ],
     },
   }
 }

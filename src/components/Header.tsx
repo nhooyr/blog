@@ -1,18 +1,15 @@
+import { css } from "@emotion/core"
 import React from "react"
+
 import GithubIcon from "simple-icons/icons/github.svg"
+import InstagramIcon from "simple-icons/icons/instagram.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
 import TwitterIcon from "simple-icons/icons/twitter.svg"
-import styled from "@emotion/styled"
-import { css } from "@emotion/core"
-import { ExternalLink, InternalLink } from "./Link"
+import { A, Link } from "./Link"
 
 const App: React.FC = () => {
   return (
-    <header
-      css={css`
-        margin-bottom: 15px;
-      `}
-    >
+    <header>
       <nav
         css={css`
           ul {
@@ -44,13 +41,15 @@ const App: React.FC = () => {
           <li>
             <h1
               css={css`
-                font-weight: 300;
                 margin: 0;
+
+                font-size: 30px;
+                font-weight: 400;
               `}
             >
-              <InternalLink to="/" visitable={false}>
+              <Link to="/" visitable={false}>
                 nhooyr
-              </InternalLink>
+              </Link>
             </h1>
           </li>
           <li>
@@ -59,8 +58,8 @@ const App: React.FC = () => {
             </Icon>
           </li>
           <li>
-            <Icon href="https://twitter.com/nhooyr">
-              <TwitterIcon />
+            <Icon href="https://www.instagram.com/nhooyr/">
+              <InstagramIcon />
             </Icon>
           </li>
           <li>
@@ -76,13 +75,13 @@ const App: React.FC = () => {
 
 const Icon: React.FC<{ href: string }> = props => {
   return (
-    <StyledIcon href={props.href} visitable={false}>
+    <A css={iconCSS} href={props.href} visitable={false}>
       {props.children}
-    </StyledIcon>
+    </A>
   )
 }
 
-const StyledIcon = styled(ExternalLink)`
+const iconCSS = css`
   svg {
     width: 24px;
     height: 100%;

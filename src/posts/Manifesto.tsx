@@ -1,6 +1,6 @@
 import React from "react"
 
-const Manifesto: React.FC = (): JSX.Element => {
+const Manifesto: React.FC = () => {
   return <div>Meow</div>
 }
 

@@ -1,2 +1,2 @@
 test:
-	jest
+	jest --config jest/config.js

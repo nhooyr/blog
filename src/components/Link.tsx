@@ -1,47 +1,34 @@
-import * as React from "react"
-import { AnchorHTMLAttributes } from "react"
-import { Link, LinkProps as RouterLinkProps } from "react-router-dom"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+import React, { AnchorHTMLAttributes } from "react"
+import * as Router from "react-router-dom"
 
-interface LinkProps {
-  readonly visitable?: boolean
+export const Link: React.FC<LinkProps & Router.LinkProps> = props => (
+  <Router.Link css={linkStyles(props.visitable)} {...stripVisitable(props)} />
+)
+
+export const A: React.FC<LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>> = props => (
+  <a css={linkStyles(props.visitable)} {...stripVisitable(props)} />
+)
+
+function stripVisitable<T extends LinkProps>(props: T) {
+  return { ...props, visitable: undefined }
 }
 
-function linkStyles(props: LinkProps) {
-  if (props.visitable == undefined) {
-    props = {
-      visitable: true,
-      ...props,
-    }
-  }
-
+function linkStyles(visitable = true) {
   return css`
     :link {
       text-decoration: none;
       color: black;
     }
-
     :visited {
-      color: ${props.visitable ? "purple" : "black"};
+      color: ${visitable ? "purple" : "black"};
     }
-
     :active {
       color: red;
     }
   `
 }
 
-// TODO it'd be nice to figure out at some point how to abstract away stripping a prop.
-export const InternalLink = styled((props: RouterLinkProps) => (
-  <Link
-    {...{
-      ...props,
-      visitable: undefined,
-    }}
-  />
-))<LinkProps>(linkStyles)
-
-export const ExternalLink = styled((props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <a {...{ ...props, visitable: undefined }}>{props.children}</a>
-))<LinkProps>(linkStyles)
+interface LinkProps {
+  readonly visitable?: boolean
+}

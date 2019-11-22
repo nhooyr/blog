@@ -1,47 +1,48 @@
-import React, { ReactElement } from "react"
 import styled from "@emotion/styled"
-import { InternalLink } from "./Link"
+import React, { ReactElement } from "react"
+import { Link, A } from "./Link"
+
+const posts = [
+  {
+    year: "2019",
+    posts: [
+      {
+        title: "wowwowow",
+        date: "May 25",
+      },
+    ],
+  },
+  {
+    year: "2018",
+    posts: [
+      {
+        title: "wowwowow",
+        date: "May 25",
+      },
+    ],
+  },
+]
 
 const PostIndex: React.FC = (): ReactElement => {
   return (
     <>
-      <div>
-        <IndexYear y="2019" />
-        <OL reversed>
-          {[...Array(10).keys()].reverse().map(
-            (i): ReactElement => {
-              i += 1
+      {posts.map(p => (
+        <div key={p.year}>
+          <IndexYear y={p.year} />
+          <OL reversed>
+            {[...Array(10).keys()].reverse().map(i => {
               return (
                 <LI key={i}>
-                  <InternalLink to="/post">
+                  <Link to="/post">
                     <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
                     <PostDate>May 25</PostDate>
-                  </InternalLink>
+                  </Link>
                 </LI>
               )
-            },
-          )}
-        </OL>
-      </div>
-
-      <div>
-        <IndexYear y="2018" />
-        <OL reversed>
-          {[...Array(10).keys()].reverse().map(
-            (i): ReactElement => {
-              i += 1
-              return (
-                <LI key={i}>
-                  <InternalLink to="/post">
-                    <PostTitle>My Post dsadmsaldsakdmsaldmaskdmkldmaslkdmaskldmaslkdddsadas</PostTitle>
-                    <PostDate>May 25</PostDate>
-                  </InternalLink>
-                </LI>
-              )
-            },
-          )}
-        </OL>
-      </div>
+            })}
+          </OL>
+        </div>
+      ))}
     </>
   )
 }
@@ -56,7 +57,7 @@ const LI = styled.li`
   list-style: none;
   margin: 20px 0;
 
-  ${InternalLink} {
+  * {
     display: flex;
     justify-content: space-between;
   }
@@ -70,9 +71,9 @@ const H2 = styled.h2`
 const IndexYear: React.FC<{ y: string }> = (props): ReactElement => {
   return (
     <H2 id={props.y}>
-      <InternalLink to={`/#${props.y}`} visitable={false}>
+      <A href={`/#${props.y}`} visitable={false}>
         {props.y}
-      </InternalLink>
+      </A>
     </H2>
   )
 }
