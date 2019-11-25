@@ -4,14 +4,15 @@ import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import InstagramIcon from "simple-icons/icons/instagram.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
-import TwitterIcon from "simple-icons/icons/twitter.svg"
-import { A, Link } from "./Link"
+import A from "./A"
 
-const App: React.FC = () => {
+export default function App() {
   return (
     <header>
       <nav
         css={css`
+          color: black;
+
           ul {
             display: flex;
             justify-content: space-between;
@@ -39,18 +40,18 @@ const App: React.FC = () => {
       >
         <ul>
           <li>
-            <h1
+            <h2
               css={css`
                 margin: 0;
 
                 font-size: 30px;
-                font-weight: 400;
+                font-weight: normal;
               `}
             >
-              <Link to="/" visitable={false}>
+              <A href="/" visitable={false}>
                 nhooyr
-              </Link>
-            </h1>
+              </A>
+            </h2>
           </li>
           <li>
             <Icon href="https://github.com/nhooyr">
@@ -73,7 +74,7 @@ const App: React.FC = () => {
   )
 }
 
-const Icon: React.FC<{ href: string }> = props => {
+function Icon(props: { href: string; children?: React.ReactNode }) {
   return (
     <A css={iconCSS} href={props.href} visitable={false}>
       {props.children}
@@ -87,5 +88,3 @@ const iconCSS = css`
     height: 100%;
   }
 `
-
-export default App

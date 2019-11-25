@@ -1,67 +1,61 @@
 import { css } from "@emotion/core"
-import React, { ReactElement } from "react"
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom"
+import React, { useEffect } from "react"
+import { BrowserRouter, Redirect, Route, Switch, useHistory } from "react-router-dom"
 import Header from "./components/Header"
 import Post from "./components/Post"
-import PostIndex from "./components/PostIndex"
+import Home from "./pages/Home"
 
-const App: React.FC = (): ReactElement => {
+export default function App() {
   return (
-    <div css={appContainerCSS}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ScrollMemory />
+      <div css={appContainerCSS}>
         <Header />
         <main css={mainCSS}>
           <Switch>
-            <Route path="/post" component={Post} />
-            <Route
-              path="/"
-              exact
-              component={(): ReactElement => (
-                <>
-                  <p>
-                    {"Hi, I'm Anmol."}
-                    <br />
-                    {"I'm a software engineer in Toronto, Canada."}
-                    <br />
-                    This is my personal site and blog.
-                  </p>
-                  <PostIndex />
-                </>
-              )}
-            />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/post" component={Post} />
             <Redirect from="/" to="/" />
           </Switch>
         </main>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
-export default App
-
+// TODO COMPLETELY REMOVE BULLSHIT CSS, MAKE EACH INDEX A BUNCH OF PARAGRAPHS AND USE LINE HEIGHT TY
 const appContainerCSS = css`
   color: #333;
-
-  h1 {
-    color: black;
+  p {
+    line-height: 2;
   }
 
-  line-height: 1.8;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 20px 40px;
+  padding: 20px 40px 30px 40px;
   max-width: 750px;
   min-width: 320px;
-
   margin: auto;
+
+  > * + * {
+    margin-top: 40px;
+  }
 `
 
 const mainCSS = css`
-  flex: 1;
-
   > * + * {
     margin-top: 30px;
   }
 `
+
+function useScrollMemory() {
+  const history = useHistory()
+  useEffect(() => {
+    if (history.action !== "POP") {
+      window.scrollTo(0, 0)
+    }
+  }, [history.location.pathname])
+}
+
+function ScrollMemory() {
+  useScrollMemory()
+  return null
+}

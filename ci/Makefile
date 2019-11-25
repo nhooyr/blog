@@ -1,4 +1,5 @@
 all: fmt lint test
+fix: fmt lint
 
 .SILENT:
 
@@ -10,5 +11,4 @@ SHELL = bash
 
 include ci/fmt.mk
 include ci/lint.mk
-include ci/fix.mk
 include ci/test.mk

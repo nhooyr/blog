@@ -31,11 +31,12 @@ settings:
 rules:
   "@typescript-eslint/no-use-before-define": off
   "@typescript-eslint/explicit-function-return-type": off
+  "@typescript-eslint/no-non-null-assertion": off
   jsx-a11y/anchor-has-content: off
   react/prop-types: off
   react-hooks/rules-of-hooks: error
-  react-hooks/exhaustive-deps: error
   emotion/no-vanilla: error
   emotion/import-from-emotion: error
   emotion/styled-import: error
   emotion/syntax-preference: [error, string]
+  react/no-unescaped-entities: off

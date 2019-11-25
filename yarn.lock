@@ -727,7 +727,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.7.2"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
   version "7.7.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
   integrity sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
@@ -1158,13 +1158,6 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@tanem/svg-injector@^8.0.35":
-  version "8.0.35"
-  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.35.tgz#91e177add726265ec5ad6d81c9b6a2a62c1120f8"
-  integrity sha512-aDiTinv2l2WCMNzbmq+W0aTf/uFPR24OD4xgSNPemUI/9yfGtfxgSuK3fdisvSLqnBl0M3Br6ifZHWCjWZKadQ==
-  dependencies:
-    "@babel/runtime" "^7.6.3"
-
 "@toml-tools/lexer@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@toml-tools/lexer/-/lexer-0.3.1.tgz#f5a4b04ee075b2862f08825972d24e73c6bea367"
@@ -1420,7 +1413,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-router-dom@^5.1.2":
+"@types/react-router-dom@*", "@types/react-router-dom@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.1.2.tgz#853f229f1f297513c0be84f7c914a08b778cfdf5"
   integrity sha512-kRx8hoBflE4Dp7uus+j/0uMHR5uGTAvQtc4A3vOTWKS+epe0leCuxEx7HNT7XGUd1lH53/moWM51MV2YUyhzAg==
@@ -1428,6 +1421,14 @@
     "@types/history" "*"
     "@types/react" "*"
     "@types/react-router" "*"
+
+"@types/react-router-hash-link@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/react-router-hash-link/-/react-router-hash-link-1.2.1.tgz#fba7dc351cef2985791023018b7a5dbd0653c843"
+  integrity sha512-jdzPGE8jFGq7fHUpPaKrJvLW1Yhoe5MQCrmgeesC+eSLseMj3cGCTYMDA4BNWG8JQmwO8NTYt/oT3uBZ77pmBA==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-router-dom" "*"
 
 "@types/react-router@*":
   version "5.1.2"
@@ -7945,7 +7946,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8135,6 +8136,13 @@ react-router-dom@^5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-router-hash-link@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-1.2.2.tgz#7a0ad5e925d49596d19554de8bc6c554ce4f8099"
+  integrity sha512-LBthLVHdqPeKDVt3+cFRhy15Z7veikOvdKRZRfyBR2vjqIE7rxn+tKLjb6DOmLm6JpoQVemVDnxQ35RVnEHdQA==
+  dependencies:
+    prop-types "^15.6.0"
+
 react-router@5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.1.2.tgz#6ea51d789cb36a6be1ba5f7c0d48dd9e817d3418"
@@ -8150,15 +8158,6 @@ react-router@5.1.2:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
-
-react-svg@^10.0.25:
-  version "10.0.25"
-  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-10.0.25.tgz#354196ca85e793ee54edf43c276a3541dfad3454"
-  integrity sha512-JflIy+HnrkKdecWFpu1+J5A48Yx8a0VroKMbjJYm8N75i8Vi7FD484ntxwPO5UixhynfDkp1QnbWNZvbinvaUw==
-  dependencies:
-    "@babel/runtime" "^7.7.2"
-    "@tanem/svg-injector" "^8.0.35"
-    prop-types "^15.7.2"
 
 react@^16.11.0:
   version "16.11.0"
