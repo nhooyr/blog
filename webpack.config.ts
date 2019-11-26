@@ -1,10 +1,8 @@
 import { CleanWebpackPlugin } from "clean-webpack-plugin"
 import CopyPlugin from "copy-webpack-plugin"
-import TerserPlugin from "terser-webpack-plugin"
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
-import OptimizeCssAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import path from "path"
 import webpack from "webpack"
 
@@ -59,7 +57,6 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
       new MiniCssExtractPlugin({
         filename: "[name]_[contenthash].css",
       }),
-      new OptimizeCssAssetsPlugin(),
     ],
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
@@ -67,18 +64,6 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
     devServer: {
       historyApiFallback: true,
       writeToDisk: true,
-    },
-    optimization: {
-      minimizer: [
-        new TerserPlugin({
-          terserOptions: {
-            output: {
-              comments: false,
-            },
-          },
-          extractComments: false,
-        }),
-      ],
     },
   }
 }
