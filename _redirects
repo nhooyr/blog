@@ -1,9 +1,9 @@
 http://nhooyr.netlify.com/* http://nhooyr.io/:splat 301!
 
-/websocket go-get=1 /websocket.html 200
-/websocket/wsjson go-get=1 /websocket.html 200
-/websocket/wspb go-get=1 /websocket.html 200
-/* go-get=1 /404.html 404
+/websocket?go-get=1 /websocket.html 200
+/websocket/wsjson?go-get=1 /websocket.html 200
+/websocket/wspb?go-get=1 /websocket.html 200
+/*?go-get=1 /404.html 404
 
 /websocket https://github.com/nhooyr/websocket
 /websocket/wsjson https://github.com/nhooyr/websocket/tree/master/wsjson
