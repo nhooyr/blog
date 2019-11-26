@@ -14,7 +14,7 @@ export default function Home() {
         <br />
         I'm a software engineer from Toronto.
         <br />
-        Welcome to my blog.
+        This is my blog.
       </p>
       <PostIndex />
     </>

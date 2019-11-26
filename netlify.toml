@@ -28,8 +28,20 @@ query = { go-get = "1" }
 status = 404
 
 [[redirects]]
-from = "/websocket*"
+from = "/websocket"
 to = "https://github.com/nhooyr/websocket"
+force = true
+status = 301
+
+[[redirects]]
+from = "/websocket/wsjson"
+to = "https://github.com/nhooyr/websocket/tree/master/wsjson"
+force = true
+status = 301
+
+[[redirects]]
+from = "/websocket/wspb"
+to = "https://github.com/nhooyr/websocket/tree/master/wspb"
 force = true
 status = 301
 
