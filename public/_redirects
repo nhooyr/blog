@@ -1,4 +1,4 @@
-https://nhooyr.netlify.com/* https://nhooyr.io/* 301!
+https://nhooyr.netlify.com/* https://nhooyr.io/:splat 301!
 
 /websocket go-get=1 /websocket.html 200
 /websocket/wsjson go-get=1 /websocket.html 200
