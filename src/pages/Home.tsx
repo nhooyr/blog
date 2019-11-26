@@ -16,11 +16,12 @@ export default function Home() {
         <br />
         This is my blog.
       </p>
-      <PostIndex />
+      {/*<PostIndex />*/}
     </>
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function PostIndex() {
   return (
     <>
