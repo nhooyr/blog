@@ -52,6 +52,9 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
       new ForkTsCheckerWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: "nhooyr.io",
+        meta: {
+          viewport: "width=device-width",
+        },
       }),
       new CopyPlugin([{ from: "public/", to: "." }]),
       new MiniCssExtractPlugin({
