@@ -15,6 +15,8 @@ export default function Home() {
         I'm a software engineer from Toronto.
         <br />
         This is my blog.
+        <br />
+        It's a WIP.
       </p>
       {/*<PostIndex />*/}
     </>
