@@ -35,7 +35,7 @@ const appContainerCSS = css`
   }
 
   padding: 20px 40px 30px 40px;
-  max-width: 660px;
+  max-width: 720px;
   min-width: 320px;
   margin: auto;
 
