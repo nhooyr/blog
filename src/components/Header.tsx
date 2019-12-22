@@ -4,9 +4,9 @@ import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import InstagramIcon from "simple-icons/icons/instagram.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
-import A from "./A"
+import Link from "./Link"
 
-export default function App() {
+export default function Header() {
   return (
     <header>
       <nav
@@ -48,9 +48,9 @@ export default function App() {
                 font-weight: normal;
               `}
             >
-              <A href="/" visitable={false}>
+              <Link href="/" visitable={false}>
                 nhooyr
-              </A>
+              </Link>
             </h2>
           </li>
           <li>
@@ -76,9 +76,9 @@ export default function App() {
 
 function Icon(props: { href: string; children?: React.ReactNode }) {
   return (
-    <A css={iconCSS} href={props.href} visitable={false}>
+    <Link css={iconCSS} href={props.href} visitable={false}>
       {props.children}
-    </A>
+    </Link>
   )
 }
 

@@ -1,6 +1,6 @@
 import { css } from "@emotion/core"
 import React from "react"
-import A from "../components/A"
+import Link from "../components/Link"
 
 export default function Home() {
   return (
@@ -15,10 +15,8 @@ export default function Home() {
         I'm a software engineer from Toronto.
         <br />
         This is my blog.
-        <br />
-        It's a WIP.
       </p>
-      {/*<PostIndex />*/}
+      <PostIndex />
     </>
   )
 }
@@ -30,16 +28,16 @@ function PostIndex() {
       {posts.map(p => (
         <div css={yearIndexCSS} key={p.year}>
           <h3 css={yearCSS} id={p.year}>
-            <A href={`/#${p.year}`} visitable={false}>
+            <Link href={`/#${p.year}`} visitable={false}>
               {p.year}
-            </A>
+            </Link>
           </h3>
 
           <ol reversed>
             {[...Array(10).keys()].reverse().map(i => {
               return (
                 <li key={i}>
-                  <A href="/post">MyPost dsadmsal dsakdmsaldmas kdmkldmaslk dmads mak da sl dm kl dm aslk d</A>
+                  <Link href="/post">MyPost dsadmsal dsakdmsaldmas kdmkldmaslk dmads mak da sl dm</Link>
                 </li>
               )
             })}

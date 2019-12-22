@@ -1,25 +1,29 @@
 import { css } from "@emotion/core"
-import React, { useEffect } from "react"
-import { BrowserRouter, Redirect, Route, Switch, useHistory } from "react-router-dom"
+import { lazy, mount, route, withView } from "navi"
+import React, { Suspense } from "react"
+import { Router, View } from "react-navi"
 import Header from "./components/Header"
-import Post from "./components/Post"
 import Home from "./pages/Home"
+
+const routes = mount({
+  "/": route({
+    view: <Home />,
+  }),
+  "/post": lazy(async () => withView((await import("./components/Post")).default)),
+})
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollMemory />
+    <Router routes={routes}>
       <div css={appContainerCSS}>
         <Header />
         <main css={mainCSS}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/post" component={Post} />
-            <Redirect from="/" to="/" />
-          </Switch>
+          <Suspense fallback={null}>
+            <View />
+          </Suspense>
         </main>
       </div>
-    </BrowserRouter>
+    </Router>
   )
 }
 
@@ -31,7 +35,7 @@ const appContainerCSS = css`
   }
 
   padding: 20px 40px 30px 40px;
-  max-width: 640px;
+  max-width: 660px;
   min-width: 320px;
   margin: auto;
 
@@ -45,17 +49,3 @@ const mainCSS = css`
     margin-top: 30px;
   }
 `
-
-function useScrollMemory() {
-  const history = useHistory()
-  useEffect(() => {
-    if (history.action !== "POP") {
-      window.scrollTo(0, 0)
-    }
-  }, [history.location.pathname])
-}
-
-function ScrollMemory() {
-  useScrollMemory()
-  return null
-}
