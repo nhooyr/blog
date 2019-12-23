@@ -1,30 +1,50 @@
 import { css } from "@emotion/core"
 import { lazy, mount, route, withView } from "navi"
-import React, { Suspense } from "react"
-import { Router, View } from "react-navi"
+import React, { Suspense, useEffect } from "react"
+import { NotFoundBoundary, Router, useCurrentRoute, useNavigation, View } from "react-navi"
 import Header from "./components/Header"
+import Loading from "./components/Loading"
+import { NotFound } from "./components/NotFound"
 import Home from "./pages/Home"
 
 const routes = mount({
   "/": route({
     view: <Home />,
   }),
-  "/post": lazy(async () => withView((await import("./components/Post")).default)),
+  "/post": lazy(async () => withView(async () => await import("./components/Post"))),
 })
 
 export default function App() {
   return (
     <Router routes={routes}>
+      <ScrollMemory />
+      <Loading />
       <div css={appContainerCSS}>
         <Header />
         <main css={mainCSS}>
           <Suspense fallback={null}>
-            <View />
+            <NotFoundBoundary render={NotFound}>
+              <View disableScrolling />
+            </NotFoundBoundary>
           </Suspense>
         </main>
       </div>
     </Router>
   )
+}
+
+function useScrollMemory() {
+  const history = useNavigation()._history
+  useEffect(() => {
+    if (history.action !== "POP") {
+      window.scrollTo(0, 0)
+    }
+  }, [useCurrentRoute().url.pathname])
+}
+
+function ScrollMemory() {
+  useScrollMemory()
+  return null
 }
 
 // TODO COMPLETELY REMOVE BULLSHIT CSS, MAKE EACH INDEX A BUNCH OF PARAGRAPHS AND USE LINE HEIGHT TY

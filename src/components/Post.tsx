@@ -1,8 +1,7 @@
 import { css } from "@emotion/core"
 import * as P from "../postmeta"
 import React from "react"
-import SyntaxHighlighter from "react-syntax-highlighter"
-import githubStyle from "react-syntax-highlighter/dist/esm/styles/hljs/xcode"
+import Code from "./Code"
 
 function PostHeader(props: P.Meta) {
   return (
@@ -46,15 +45,7 @@ export default function Post() {
         composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the
         chromatic scale in order to ensure
       </p>
-      <SyntaxHighlighter
-        css={css`
-          font-size: 14px;
-        `}
-        language="javascript"
-        style={githubStyle}
-      >
-        {source}
-      </SyntaxHighlighter>
+      <Code language="javascript">{source}</Code>
       <p>
         The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and
         minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every
