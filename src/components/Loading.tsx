@@ -31,19 +31,19 @@ export default function Loading() {
 }
 
 const appear = keyframes`
-          0% {
-            transform: scaleX(0);
-          }
-          10% {
-            transform: scaleX(0.3);
-          }
-          50% {
-            transform: scaleX(0.7);
-          }
-          90% {
-            transform: scaleX(0.8);
-          }
-          100% {
-            transform: scaleX(1);
-          }
+0% {
+  transform: scaleX(0);
+}
+10% {
+  transform: scaleX(0.3);
+}
+50% {
+  transform: scaleX(0.7);
+}
+90% {
+  transform: scaleX(0.8);
+}
+100% {
+  transform: scaleX(1);
+}
 `

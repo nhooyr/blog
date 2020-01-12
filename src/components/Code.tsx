@@ -8,6 +8,7 @@ export default function Code(props: { language: string; children: string }) {
     <SyntaxHighlighter
       css={css`
         font-size: 14px;
+        padding: 0 !important;
       `}
       language={props.language}
       style={githubStyle}

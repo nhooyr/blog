@@ -1,27 +1,62 @@
 import { css } from "@emotion/core"
-import { lazy, mount, route, withView } from "navi"
-import React, { Suspense, useEffect } from "react"
-import { NotFoundBoundary, Router, useCurrentRoute, useNavigation, View } from "react-navi"
+import { lazy, mount, route } from "navi"
+import React, { Suspense } from "react"
+import { NotFoundBoundary, Router, View } from "react-navi"
 import Header from "./components/Header"
 import Loading from "./components/Loading"
 import { NotFound } from "./components/NotFound"
-import Home from "./pages/Home"
+import PostHeader from "./components/PostHeader"
+import ScrollMemory from "./components/ScrollMemory"
+import Home from "./Home"
+import posts from "./posts"
 
-const routes = mount({
+const routes: { [path: string]: any } = {
   "/": route({
     view: <Home />,
   }),
-  "/post": lazy(async () => withView(async () => await import("./components/Post"))),
+}
+
+posts.forEach(p => {
+  routes[p.meta.path] = lazy(async () => {
+    const Body = (await posts[0].body()).default
+    return route({
+      view: (
+        <>
+          <PostHeader {...p.meta} />
+          <Body />
+        </>
+      ),
+    })
+  })
 })
 
 export default function App() {
   return (
-    <Router routes={routes}>
+    <Router routes={mount(routes)}>
       <ScrollMemory />
       <Loading />
-      <div css={appContainerCSS}>
+      <div
+        css={css`
+          color: #333;
+
+          padding: 10px 20px;
+          max-width: 720px;
+          min-width: 320px;
+          margin: auto;
+
+          > * + * {
+            margin: 40px 0 0 0;
+          }
+        `}
+      >
         <Header />
-        <main css={mainCSS}>
+        <main
+          css={css`
+            > * + * {
+              margin: 30px 0 0 0;
+            }
+          `}
+        >
           <Suspense fallback={null}>
             <NotFoundBoundary render={NotFound}>
               <View disableScrolling />
@@ -32,40 +67,3 @@ export default function App() {
     </Router>
   )
 }
-
-function useScrollMemory() {
-  const history = useNavigation()._history
-  useEffect(() => {
-    if (history.action !== "POP") {
-      window.scrollTo(0, 0)
-    }
-  }, [useCurrentRoute().url.pathname])
-}
-
-function ScrollMemory() {
-  useScrollMemory()
-  return null
-}
-
-// TODO COMPLETELY REMOVE BULLSHIT CSS, MAKE EACH INDEX A BUNCH OF PARAGRAPHS AND USE LINE HEIGHT TY
-const appContainerCSS = css`
-  color: #333;
-  p {
-    line-height: 2;
-  }
-
-  padding: 20px 40px 30px 40px;
-  max-width: 720px;
-  min-width: 320px;
-  margin: auto;
-
-  > * + * {
-    margin-top: 40px;
-  }
-`
-
-const mainCSS = css`
-  > * + * {
-    margin-top: 30px;
-  }
-`
