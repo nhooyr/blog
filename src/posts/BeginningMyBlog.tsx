@@ -5,32 +5,31 @@ import P from "../components/P"
 export default function BeginningMyBlog() {
   return (
     <>
-      <P>Coming soon....</P>
-      {/*<P>*/}
-      {/*  The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and*/}
-      {/*  minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every*/}
-      {/*  interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section*/}
-      {/*  1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century*/}
-      {/*  composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the*/}
-      {/*  chromatic scale in order to ensure*/}
-      {/*</P>*/}
-      {/*<Code language="javascript">{source}</Code>*/}
-      {/*<P>*/}
-      {/*  The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and*/}
-      {/*  minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every*/}
-      {/*  interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section*/}
-      {/*  1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century*/}
-      {/*  composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the*/}
-      {/*  chromatic scale in order to ensure*/}
-      {/*</P>*/}
-      {/*<P>*/}
-      {/*  The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and*/}
-      {/*  minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every*/}
-      {/*  interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section*/}
-      {/*  1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century*/}
-      {/*  composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the*/}
-      {/*  chromatic scale in order to ensure*/}
-      {/*</P>*/}
+      <P>
+        The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and
+        minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every
+        interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section
+        1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century
+        composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the
+        chromatic scale in order to ensure
+      </P>
+      <Code language="javascript">{source}</Code>
+      <P>
+        The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and
+        minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every
+        interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section
+        1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century
+        composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the
+        chromatic scale in order to ensure
+      </P>
+      <P>
+        The Western (Section 2.8) musical tradition that developed in Europe after the middle ages is based on major and
+        minor scales, but there are other scales that are a part of this tradition. In the chromatic scale, every
+        interval (Section 4.5) is a half step (Section 4.2). This scale gives all the sharp, 􏰅at, and natural (Section
+        1.1.3) notes commonly used in all Western music. It is also the twelve-tone scale used by twentieth-century
+        composers to create their atonal music (pg 91). Young instrumentalists are encouraged to practice playing the
+        chromatic scale in order to ensure
+      </P>
     </>
   )
 }
