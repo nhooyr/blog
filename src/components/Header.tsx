@@ -4,9 +4,10 @@ import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import InstagramIcon from "simple-icons/icons/instagram.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
-import A from "./A"
+import H2 from "./H2"
+import Link from "./Link"
 
-export default function App() {
+export default function Header() {
   return (
     <header>
       <nav
@@ -17,20 +18,11 @@ export default function App() {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0;
             margin: 0;
           }
 
-          ul li {
-            list-style: none;
-          }
-
-          ul li img {
-            width: 24px;
-          }
-
           ul li + li {
-            margin-left: 20px;
+            margin-left: 25px;
           }
 
           ul li:nth-of-type(2) {
@@ -40,18 +32,15 @@ export default function App() {
       >
         <ul>
           <li>
-            <h2
+            <H2
               css={css`
                 margin: 0;
-
-                font-size: 30px;
-                font-weight: normal;
               `}
             >
-              <A href="/" visitable={false}>
+              <Link href="/" visitable={false}>
                 nhooyr
-              </A>
-            </h2>
+              </Link>
+            </H2>
           </li>
           <li>
             <Icon href="https://github.com/nhooyr">
@@ -76,15 +65,17 @@ export default function App() {
 
 function Icon(props: { href: string; children?: React.ReactNode }) {
   return (
-    <A css={iconCSS} href={props.href} visitable={false}>
+    <Link
+      css={css`
+        svg {
+          width: 24px;
+          height: 100%;
+        }
+      `}
+      href={props.href}
+      visitable={false}
+    >
       {props.children}
-    </A>
+    </Link>
   )
 }
-
-const iconCSS = css`
-  svg {
-    width: 24px;
-    height: 100%;
-  }
-`
