@@ -4,7 +4,7 @@ import React, { Suspense } from "react"
 import { NotFoundBoundary, Router, View } from "react-navi"
 import Header from "./components/Header"
 import Loading from "./components/Loading"
-import { NotFound } from "./components/NotFound"
+import { NotFound } from "./components/404"
 import PostHeader from "./components/PostHeader"
 import ScrollMemory from "./components/ScrollMemory"
 import Home from "./Home"
@@ -39,7 +39,7 @@ export default function App() {
         css={css`
           color: #333;
 
-          padding: 10px 20px;
+          padding: 10px 20px 40px 20px;
           max-width: 720px;
           min-width: 320px;
           margin: auto;
