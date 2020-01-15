@@ -11,11 +11,11 @@ export default function Home() {
       <P>
         Hi, I'm Anmol.
         <br />
-        I'm a software engineer from Toronto.
-        <br />
         I go by nhooyr on the internet.
         <br />
-        This is my blog.
+        I'm a software engineer from Toronto.
+        <br />
+        Welcome to my blog.
       </P>
       <PostIndex />
     </>
@@ -46,15 +46,13 @@ function PostIndex() {
           Posts
         </H1>
 
-        <ol reversed>
+        <ol>
           {postIndex.map((p, i) => {
             return (
               <li key={i}>
                 <span>
                   <Link href={p.meta.path}>
-                    {formatDate(p.meta.publishDate, {
-                      year: false,
-                    })}
+                    {formatDate(p.meta.publishDate)}
                     &nbsp; &mdash; &nbsp;
                     {p.meta.title}
                   </Link>

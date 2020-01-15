@@ -2,7 +2,7 @@ import React from "react"
 import Code from "../components/Code"
 import P from "../components/P"
 
-export default function Why() {
+export default function BeginningMyBlog() {
   return (
     <>
       <P>

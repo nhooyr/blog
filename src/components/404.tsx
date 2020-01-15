@@ -9,9 +9,10 @@ export function NotFound() {
         top: 0;
         left: 0;
         position: fixed;
+
         width: 100vw;
         height: 100vh;
-        min-height: 400px;
+        min-height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
