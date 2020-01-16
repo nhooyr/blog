@@ -1,5 +1,5 @@
 import React from "react"
-import Code from "../components/Code"
+// import Code from "../components/Code"
 import P from "../components/P"
 
 export default function BeginningMyBlog() {
@@ -35,36 +35,36 @@ export default function BeginningMyBlog() {
   )
 }
 
-const source = `module.exports = api => {
-  api.cache.forever()
-
-  const dev = process.env.NODE_ENV === "development"
-  return {
-    presets: [
-      [
-        "@babel/preset-env",
-        {
-          useBuiltIns: "usage",
-          corejs: 3,
-        },
-      ],
-      [
-        "@babel/preset-react",
-        {
-          development: dev,
-        },
-      ],
-      "@babel/preset-typescript",
-      "@emotion/babel-preset-css-prop",
-    ],
-    plugins: [
-      [
-        "emotion",
-        {
-          sourceMap: dev,
-        },
-      ],
-      "@babel/plugin-proposal-class-properties",
-    ],
-  }
-}`
+// const source = `module.exports = api => {
+//   api.cache.forever()
+//
+//   const dev = process.env.NODE_ENV === "development"
+//   return {
+//     presets: [
+//       [
+//         "@babel/preset-env",
+//         {
+//           useBuiltIns: "usage",
+//           corejs: 3,
+//         },
+//       ],
+//       [
+//         "@babel/preset-react",
+//         {
+//           development: dev,
+//         },
+//       ],
+//       "@babel/preset-typescript",
+//       "@emotion/babel-preset-css-prop",
+//     ],
+//     plugins: [
+//       [
+//         "emotion",
+//         {
+//           sourceMap: dev,
+//         },
+//       ],
+//       "@babel/plugin-proposal-class-properties",
+//     ],
+//   }
+// }`
