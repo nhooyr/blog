@@ -65,6 +65,7 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
       extensions: [".tsx", ".ts", ".js"],
     },
     devServer: {
+      port: process.env.PORT ? +process.env.PORT : undefined,
       historyApiFallback: true,
       writeToDisk: true,
     },

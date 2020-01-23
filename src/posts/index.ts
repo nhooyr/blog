@@ -1,4 +1,6 @@
 import { FC } from "react"
+import * as WhyNhooyr from "./WhyNhooyr"
+import * as BeginningMyBlog from "./BeginningMyBlog"
 
 export interface Meta {
   readonly title: string
@@ -9,9 +11,7 @@ export interface Meta {
 
 export interface Post {
   readonly meta: Meta
-  readonly body: () => Promise<{
-    readonly default: FC
-  }>
+  readonly body: () => Promise<FC>
 }
 
 export function formatDate(date: Date) {
@@ -20,12 +20,12 @@ export function formatDate(date: Date) {
 
 const index: Array<Post> = [
   {
-    meta: {
-      title: "Beginning My Blog",
-      path: "/beginning-my-blog",
-      publishDate: new Date("January 20, 2020"),
-    },
-    body: () => import("./BeginningMyBlog"),
+    meta: WhyNhooyr.meta,
+    body: () => import("./WhyNhooyr").then(m => m.body),
+  },
+  {
+    meta: BeginningMyBlog.meta,
+    body: () => import("./BeginningMyBlog").then(m => m.body),
   },
 ]
 

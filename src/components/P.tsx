@@ -6,6 +6,10 @@ export default function P(props: React.PropsWithChildren<{}>) {
     <p
       css={css`
         line-height: 2;
+
+        > a {
+          text-decoration: underline !important;
+        }
       `}
       {...props}
     />

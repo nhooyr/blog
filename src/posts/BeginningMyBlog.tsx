@@ -1,7 +1,13 @@
 import React from "react"
 import P from "../components/P"
 
-export default function BeginningMyBlog() {
+export const meta = {
+  title: "Beginning My Blog",
+  path: "/beginning-my-blog",
+  publishDate: new Date("January 20, 2020"),
+}
+
+export function body() {
   return (
     <>
       <P>
