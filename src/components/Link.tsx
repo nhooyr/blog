@@ -24,11 +24,11 @@ export default function Link(props: Props) {
         :visited {
           color: ${props.visitable ? "purple" : "inherit"};
         }
-        :active {
-          color: red;
-        }
         :hover {
           text-decoration: underline;
+        }
+        :active {
+          color: red;
         }
       `}
       {...{ ...props, visitable: undefined }}

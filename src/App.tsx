@@ -18,7 +18,7 @@ const routes: { [path: string]: any } = {
 
 posts.forEach((p, i) => {
   routes[p.meta.path] = lazy(async () => {
-    const Body = await posts[i].body()
+    const Body = (await posts[i].body()).default
     return route({
       view: (
         <>
