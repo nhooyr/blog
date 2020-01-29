@@ -55,6 +55,7 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
         meta: {
           viewport: "width=device-width",
         },
+        favicon: "public/favicon.png",
       }),
       new CopyPlugin([{ from: "public/", to: "." }]),
       new MiniCssExtractPlugin({
