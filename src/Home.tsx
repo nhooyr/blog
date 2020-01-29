@@ -41,6 +41,8 @@ function PostIndex() {
         <H1
           css={css`
             margin: 40px 0 0 0;
+            font-size: 75px;
+            font-weight: 200;
           `}
         >
           Posts

@@ -7,19 +7,25 @@ jobs:
     container: node
     steps:
       - uses: actions/checkout@v1
-      - run: yarn && yarn fmt
+      - run: yarn --frozen-lockfile && yarn fmt
+        env:
+          CI: 1
+
   lint:
     runs-on: ubuntu-latest
     container: node
     steps:
       - uses: actions/checkout@v1
-      - run: yarn && yarn lint
+      - run: yarn --frozen-lockfile && yarn lint
+        env:
+          CI: 1
+
   test:
     runs-on: ubuntu-latest
     container: node
     steps:
       - uses: actions/checkout@v1
-      - run: yarn && yarn test
+      - run: yarn --frozen-lockfile && yarn test
       - uses: coverallsapp/github-action@v1.0.1
         with:
           github-token: ${{ secrets.github_token }}
