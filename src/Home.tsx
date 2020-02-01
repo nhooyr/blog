@@ -26,26 +26,26 @@ function PostIndex() {
   return (
     <div
       css={css`
-          ol {
-            padding: 0;
-            margin: 0;
-          }
+        ol {
+          padding: 0;
+          margin: 0;
+        }
 
-          li {
-            display: inline;
-            line-height: 2;
-          }
-        `}
+        li {
+          display: inline;
+          line-height: 2;
+        }
+      `}
     >
       <H1
         css={css`
-            margin: 40px 0 0 0;
-            font-size: 75px;
-            font-weight: 200;
-          `}
+          margin: 40px 0 0 0;
+          font-size: 75px;
+          font-weight: 200;
+        `}
       >
         Posts
-        </H1>
+      </H1>
 
       <ol>
         {postIndex.map((p, i) => {
@@ -55,7 +55,7 @@ function PostIndex() {
                 <Link href={p.meta.path}>
                   {formatDate(p.meta.publishDate)}
                   &nbsp; &mdash; &nbsp;
-                    {p.meta.title}
+                  {p.meta.title}
                 </Link>
               </span>
               <br />
