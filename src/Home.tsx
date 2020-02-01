@@ -24,9 +24,8 @@ export default function Home() {
 
 function PostIndex() {
   return (
-    <>
-      <div
-        css={css`
+    <div
+      css={css`
           ol {
             padding: 0;
             margin: 0;
@@ -37,34 +36,33 @@ function PostIndex() {
             line-height: 2;
           }
         `}
-      >
-        <H1
-          css={css`
+    >
+      <H1
+        css={css`
             margin: 40px 0 0 0;
             font-size: 75px;
             font-weight: 200;
           `}
-        >
-          Posts
+      >
+        Posts
         </H1>
 
-        <ol>
-          {postIndex.map((p, i) => {
-            return (
-              <li key={i}>
-                <span>
-                  <Link href={p.meta.path}>
-                    {formatDate(p.meta.publishDate)}
-                    &nbsp; &mdash; &nbsp;
+      <ol>
+        {postIndex.map((p, i) => {
+          return (
+            <li key={i}>
+              <span>
+                <Link href={p.meta.path}>
+                  {formatDate(p.meta.publishDate)}
+                  &nbsp; &mdash; &nbsp;
                     {p.meta.title}
-                  </Link>
-                </span>
-                <br />
-              </li>
-            )
-          })}
-        </ol>
-      </div>
-    </>
+                </Link>
+              </span>
+              <br />
+            </li>
+          )
+        })}
+      </ol>
+    </div>
   )
 }
