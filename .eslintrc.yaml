@@ -34,6 +34,7 @@ rules:
   "@typescript-eslint/no-non-null-assertion": off
   "@typescript-eslint/ban-ts-ignore": off
   "@typescript-eslint/no-explicit-any": off
+  "@typescript-eslint/no-empty-function": off
   jsx-a11y/anchor-has-content: off
   jsx-a11y/heading-has-content: off
   react/prop-types: off

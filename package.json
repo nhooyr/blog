@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
-    "prod": "webpack --mode production && yarn gen-static",
-    "gen-static": "GEN_STATIC=1 webpack --mode development && node src/genStatic/out/index.js",
+    "prod": "webpack --mode production && yarn gen",
+    "gen": "GEN=1 webpack --mode development && node src/gen/out/index.js",
     "fmt": "make -f ./ci/Makefile fmt",
     "lint": "make -f ./ci/Makefile lint",
     "fix": "make -f ./ci/Makefile fix",

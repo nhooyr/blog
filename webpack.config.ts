@@ -8,7 +8,7 @@ import webpack from "webpack"
 
 export default (env: {}, argv: { mode: string }) => {
   const dev = argv.mode !== "production"
-  const genStatic = process.env.GEN_STATIC && process.env.GEN_STATIC !== ""
+  const gen = process.env.GEN && process.env.GEN !== ""
 
   const config: webpack.Configuration = {
     entry: "./src/index.tsx",
@@ -69,10 +69,10 @@ export default (env: {}, argv: { mode: string }) => {
     },
   }
 
-  if (genStatic) {
+  if (gen) {
     config.target = "node"
-    config.entry = "./src/genStatic/index.tsx"
-    config.output!.path = path.resolve("src/genStatic/out")
+    config.entry = "./src/gen/index.tsx"
+    config.output!.path = path.resolve("src/gen/out")
     config.output!.filename = "index.js"
   }
 
