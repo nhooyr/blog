@@ -24,7 +24,12 @@ export default function Link(props: Props) {
         :visited {
           color: ${props.visitable ? "var(--visitable-color)" : "inherit"};
         }
-        :hover {
+        @media (hover: hover) {
+          :hover {
+            color: var(--active-color);
+          }
+        }
+        :active {
           color: var(--active-color);
         }
       `}

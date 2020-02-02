@@ -7,6 +7,9 @@ import "sanitize.css/typography.css"
 import Router, { routes } from "./Router"
 
 async function main() {
+  // https://alxgbsn.co.uk/2011/10/17/enable-css-active-pseudo-styles-in-mobile-safari/
+  document.body.ontouchstart = () => null
+
   const navigation = Navi.createBrowserNavigation({ routes })
   // Ensures the current route is fully loaded to avoid flashes.
   await navigation.getRoute()
