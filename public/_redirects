@@ -8,5 +8,3 @@ https://nhooyr.netlify.com/* https://nhooyr.io/:splat 301!
 /websocket https://github.com/nhooyr/websocket
 /websocket/wsjson https://github.com/nhooyr/websocket/tree/master/wsjson
 /websocket/wspb https://github.com/nhooyr/websocket/tree/master/wspb
-
-/* /index.html 200

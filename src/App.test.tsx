@@ -1,12 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
+import Router, { routes } from "./Router"
 
 it("renders without crashing", (): void => {
   window.scroll = () => {
     return
   }
   const div = document.createElement("div")
-  ReactDOM.render(<App />, div)
+  ReactDOM.render(<Router routes={routes} />, div)
   ReactDOM.unmountComponentAtNode(div)
 })

@@ -6,10 +6,11 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import path from "path"
 import webpack from "webpack"
 
-export default (env: {}, argv: { mode: string }): webpack.Configuration => {
+export default (env: {}, argv: { mode: string }) => {
   const dev = argv.mode !== "production"
+  const genStatic = process.env.GEN_STATIC && process.env.GEN_STATIC !== ""
 
-  return {
+  const config: webpack.Configuration = {
     entry: "./src/index.tsx",
     module: {
       rules: [
@@ -51,11 +52,7 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
       new CleanWebpackPlugin(),
       new ForkTsCheckerWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: "nhooyr.io",
-        meta: {
-          viewport: "width=device-width",
-        },
-        favicon: "public/favicon.png",
+        template: "./src/index.html",
       }),
       new CopyPlugin([{ from: "public/", to: "." }]),
       new MiniCssExtractPlugin({
@@ -71,4 +68,13 @@ export default (env: {}, argv: { mode: string }): webpack.Configuration => {
       writeToDisk: true,
     },
   }
+
+  if (genStatic) {
+    config.target = "node"
+    config.entry = "./src/genStatic/index.tsx"
+    config.output!.path = path.resolve("src/genStatic/out")
+    config.output!.filename = "index.js"
+  }
+
+  return config
 }

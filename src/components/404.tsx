@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 import React from "react"
 import H1 from "./H1"
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <div
       css={css`
