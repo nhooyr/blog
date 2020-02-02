@@ -10,8 +10,9 @@ export default function TimeToGiveBack() {
     <>
       <P>Hi, I'm Anmol. I go by nhooyr on the internet. I'm a software engineer from Toronto.</P>
       <P>
-        The last three years of my life have been the most wonderful and unexpected. In I dropped out of high school in
-        Grade 12 to take a full time software engineering position at <Link href="https://coder.com">Coder</Link>. I
+        The last three years of my life have been some of the most wonderful and unexpected. I dropped out of high
+        school in Grade 12 to take a full time software engineering position at{" "}
+        <Link href="https://coder.com">Coder</Link>.
       </P>
     </>
   )
