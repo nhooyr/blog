@@ -5,7 +5,7 @@ export default function H1(props: React.PropsWithChildren<{}>) {
   return (
     <h1
       css={css`
-        color: black;
+        color: var(--bright-color);
         font-size: 50px;
         line-height: 1.2;
         margin: 20px 0 0 0;

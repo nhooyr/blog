@@ -1,4 +1,4 @@
-import { css } from "@emotion/core"
+import { css, Global } from "@emotion/core"
 import React, { Suspense } from "react"
 import { NotFoundBoundary, View } from "react-navi"
 import NotFound from "./components/404"
@@ -9,19 +9,36 @@ import ScrollMemory from "./components/ScrollMemory"
 export default function App() {
   return (
     <>
+      <Global
+        styles={css`
+          :root {
+            color: #333;
+            --visitable-color: purple;
+            --bright-color: black;
+            --active-color: red;
+
+            @media (prefers-color-scheme: dark) {
+              color: #eee;
+              --visitable-color: #cc99ff;
+              --bright-color: white;
+              --active-color: #ff0066;
+
+              background-color: black;
+            }
+          }
+        `}
+      />
       <ScrollMemory />
       <Loading />
       <div
         css={css`
-          color: #333;
-
           padding: 10px 20px 40px 20px;
           max-width: 720px;
           min-width: 320px;
           margin: auto;
 
           > * + * {
-            margin: 40px 0 0 0;
+            margin: 30px 0 0 0;
           }
         `}
       >
@@ -29,7 +46,7 @@ export default function App() {
         <main
           css={css`
             > * + * {
-              margin: 30px 0 0 0;
+              margin: 20px 0 0 0;
             }
           `}
         >

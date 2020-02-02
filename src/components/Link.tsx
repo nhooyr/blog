@@ -22,13 +22,15 @@ export default function Link(props: Props) {
           color: inherit;
         }
         :visited {
-          color: ${props.visitable ? "purple" : "inherit"};
+          color: ${props.visitable ? "var(--visitable-color)" : "inherit"};
         }
-        :hover {
-          text-decoration: underline;
+        @media (hover: hover) {
+          :hover {
+            color: var(--active-color);
+          }
         }
         :active {
-          color: red;
+          color: var(--active-color);
         }
       `}
       {...{ ...props, visitable: undefined }}

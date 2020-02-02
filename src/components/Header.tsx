@@ -12,7 +12,7 @@ export default function Header() {
     <header>
       <nav
         css={css`
-          color: black;
+          color: var(--bright-color);
 
           ul {
             display: flex;
