@@ -6,7 +6,7 @@
   "background_color": "#fff",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "favicon-touch.png",
       "sizes": "256x256",
       "type": "image/png"
     }
