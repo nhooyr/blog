@@ -2,6 +2,7 @@ import { default as Navi, mount, route } from "navi"
 import React from "react"
 import * as ReactNavi from "react-navi"
 import App from "./App"
+import NotFound from "./components/404"
 import PostHeader from "./components/PostHeader"
 import Home from "./Home"
 import posts from "./posts"
@@ -18,6 +19,9 @@ function genRoutes() {
   const routes: { [path: string]: any } = {
     "/": route({
       view: <Home />,
+    }),
+    "/404": route({
+      view: <NotFound />,
     }),
   }
 
