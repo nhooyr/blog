@@ -19,18 +19,14 @@ export function formatDate(date: Date) {
 }
 
 const index: Array<Post> = [
-  ...(process.env.NODE_ENV === "production"
-    ? []
-    : [
-        {
-          meta: {
-            title: "Why nhooyr?",
-            path: "/why-nhooyr",
-            publishDate: new Date("Feb 9, 2020"),
-          },
-          body: () => import("./2-WhyNhooyr"),
-        },
-      ]),
+  {
+    meta: {
+      title: "Why nhooyr?",
+      path: "/why-nhooyr",
+      publishDate: new Date("Feb 9, 2020"),
+    },
+    body: () => import("./2-WhyNhooyr"),
+  },
   {
     meta: {
       title: "Time To Give Back",
