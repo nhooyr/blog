@@ -63,8 +63,6 @@ export default (env: {}, argv: { mode: string }) => {
       extensions: [".tsx", ".ts", ".js"],
     },
     devServer: {
-      host: process.env.HOST || undefined,
-      port: process.env.PORT ? +process.env.PORT : undefined,
       historyApiFallback: true,
       writeToDisk: true,
     },
@@ -73,6 +71,9 @@ export default (env: {}, argv: { mode: string }) => {
   if (process.env.ADDR && process.env.ADDR !== "") {
     const e = process.env.ADDR.split(":")
     config.devServer!.host = e[0]
+    if (config.devServer!.host === "") {
+      config.devServer!.host = "0.0.0.0"
+    }
     config.devServer!.port = +e[1]
   }
 
