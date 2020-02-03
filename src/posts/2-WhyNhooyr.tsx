@@ -2,32 +2,37 @@ import { css } from "@emotion/core"
 import React, { useCallback, useState } from "react"
 import Link from "../components/Link"
 import P from "../components/P"
+import * as Input from "../components/Input"
 
 export default function WhyNhooyr() {
   const [rot13Input, setROT13Input] = useState("nhooyr")
-  const onROT13Change = useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
-    setROT13Input(ev.target.value)
-  }, [
-    setROT13Input,
-  ])
-  const rot13Submit = useCallback(ev => {
-    ev.preventDefault()
+  const onROT13Change = useCallback(
+    (ev: React.ChangeEvent<HTMLInputElement>) => {
+      setROT13Input(ev.target.value)
+    },
+    [setROT13Input],
+  )
+  const rot13Submit = useCallback(
+    ev => {
+      ev.preventDefault()
 
-    let cipherText = ""
-    for (let char of rot13Input) {
-      let cc = char.charCodeAt(0)
-      if (65 <= cc && cc <= 90) {
-        cc = ((cc - 65) + 13) % 26 + 65
-        char = String.fromCharCode(cc)
-      } else if (97 <= cc && cc <= 122) {
-        cc = ((cc - 97) + 13) % 26 + 97
-        char = String.fromCharCode(cc)
+      let cipherText = ""
+      for (let char of rot13Input) {
+        let cc = char.charCodeAt(0)
+        if (65 <= cc && cc <= 90) {
+          cc = ((cc - 65 + 13) % 26) + 65
+          char = String.fromCharCode(cc)
+        } else if (97 <= cc && cc <= 122) {
+          cc = ((cc - 97 + 13) % 26) + 97
+          char = String.fromCharCode(cc)
+        }
+
+        cipherText += char
       }
-
-      cipherText += char
-    }
-    setROT13Input(cipherText)
-  }, [rot13Input, setROT13Input])
+      setROT13Input(cipherText)
+    },
+    [rot13Input, setROT13Input],
+  )
 
   if (process.env.NODE_ENV === "production") {
     return <P>Coming soon...</P>
@@ -55,12 +60,21 @@ export default function WhyNhooyr() {
       </P>
       <P>That’s when I knew it was mine.</P>
       <form onSubmit={rot13Submit}>
-        <input type="text" name="ROT13" value={rot13Input} onChange={onROT13Change} />
-        <input css={css`
-  :active {
-    color: red;
-  }
-`} type="submit" value="ROT13" />
+        <Input.Submit
+          value="ROT13"
+          css={css`
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+          `}
+        />
+        <Input.Text
+          value={rot13Input}
+          onChange={onROT13Change}
+          css={css`
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+          `}
+        />
       </form>
     </>
   )
