@@ -13,9 +13,9 @@ export default function TimeToGiveBack() {
         was no need for me to continue schooling and so I promptly dropped out.
       </P>
       <P>
-        The greatest factor in my success as an engineer has been my own passion, initiative and focus. Nevertheless,
-        the sheer volume of quality information online I have read in websites, blogs and forums has contributed
-        immensely. For at least the last 8 years, the internet has been my primary source of education.
+        The greatest factor in my success as an engineer has been my own passion, initiative and focus. However, the
+        incredible volume of quality reading online in websites, blogs and forums has contributed immensely. For at
+        least the last 8 years, the internet has been my primary means of education.
       </P>
       <P>It is time for me to contribute back.</P>
       <P>
@@ -24,11 +24,7 @@ export default function TimeToGiveBack() {
       </P>
       <P>
         From a technical standpoint, I believe this blog is well engineered and one of my first posts will be to justify
-        its inner workings and help demystify modern frontend development.
-      </P>
-      <P>
-        You can retrieve the full source code behind this blog and follow my progress at{" "}
-        <Link href="https://github.com/nhooyr/blog">github.com/nhooyr/blog</Link>.
+        its inner workings.
       </P>
       <P>I sincerely hope my efforts with this blog are successful in giving back.</P>
     </>

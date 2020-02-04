@@ -8,6 +8,9 @@ export default function Loading() {
       css={[
         css`
           background-color: blue;
+          @media (prefers-color-scheme: dark) {
+            background-color: dodgerblue;
+          }
           width: 100vw;
           height: 2px;
           position: fixed;
