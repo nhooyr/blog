@@ -22,9 +22,7 @@ export default function TimeToGiveBack() {
         On this blog you can expect to find quality writings about software, philosophy, life and everything in between.
         There will never be <i>any</i> ads, popups or bullshit.
       </P>
-      <P>
-        This blog is well engineered and one of my first posts will be to justify its inner workings.
-      </P>
+      <P>This blog is well engineered and one of my first posts will be to justify its inner workings.</P>
       <P>I sincerely hope my efforts with this blog are successful in giving back.</P>
     </>
   )
