@@ -74,6 +74,7 @@ function Icon(props: { href: string; children?: React.ReactNode }) {
       `}
       href={props.href}
       visitable={false}
+      aria-label={props.href}
     >
       {props.children}
     </Link>
