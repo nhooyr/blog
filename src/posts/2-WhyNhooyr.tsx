@@ -5,7 +5,7 @@ import P from "../components/P"
 import * as Input from "../components/Input"
 
 export default function WhyNhooyr() {
-  const [rot13Input, setROT13Input] = useState("nhooyr")
+  const [rot13Input, setROT13Input] = useState("aubble")
   const onROT13Change = useCallback(
     (ev: React.ChangeEvent<HTMLInputElement>) => {
       setROT13Input(ev.target.value)
@@ -56,25 +56,22 @@ export default function WhyNhooyr() {
         google search with zero results.
       </P>
       <P>That’s when I knew it was mine.</P>
-      {process.env.NODE_ENV !== "production" && (
-        <form onSubmit={rot13Submit}>
-          <Input.Submit
-            value="ROT13"
-            css={css`
-              border-bottom-right-radius: 0;
-              border-top-right-radius: 0;
-            `}
-          />
-          <Input.Text
-            value={rot13Input}
-            onChange={onROT13Change}
-            css={css`
-              border-bottom-left-radius: 0;
-              border-top-left-radius: 0;
-            `}
-          />
-        </form>
-      )}
+      <form onSubmit={rot13Submit}>
+        <Input.Text
+          value={rot13Input}
+          onChange={onROT13Change}
+          css={css`
+            overflow: visible;
+            word-break: normal;
+          `}
+        />
+        <Input.Submit
+          value="ROT13"
+          css={css`
+            margin-left: 10px;
+          `}
+        />
+      </form>
     </>
   )
 }

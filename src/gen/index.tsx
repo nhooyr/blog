@@ -22,10 +22,7 @@ async function renderPageToString(path: string) {
   if (route.title) {
     html = html.replace(`<title>nhooyr.io</title>`, `<title>${route.title}</title>`)
   }
-  html = html.replace(
-    `</head>`,
-    helmetContext.helmet.meta.toString() + "\n    </head>",
-  )
+  html = html.replace(`</head>`, helmetContext.helmet.meta.toString() + "\n    </head>")
   return html
 }
 
