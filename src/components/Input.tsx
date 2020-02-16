@@ -7,7 +7,12 @@ export function Text(props: { value: string; onChange: React.ChangeEventHandler<
       type="text"
       {...props}
       css={css`
+        appearance: none;
         border-radius: 5px;
+        padding: 5px 15px;
+        height: 40px;
+        width: 150px;
+        border: 1px solid #ccc;
       `}
     />
   )
@@ -19,11 +24,25 @@ export function Submit(props: { value: string }) {
       type="submit"
       {...props}
       css={css`
+        padding: 5px 15px;
+        height: 40px;
         border-radius: 5px;
-        background-color: rgb(0, 112, 201);
+        border: none;
+
         color: white;
+        @media (prefers-color-scheme: dark) {
+          color: black;
+        }
+
+        background-color: var(--bright-color);
+        @media (hover: hover) {
+          :hover {
+            background-color: var(--active-color);
+          }
+        }
+
         :active {
-          color: red;
+          background-color: var(--active-color);
         }
       `}
     />

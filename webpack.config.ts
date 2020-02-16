@@ -46,6 +46,7 @@ export default (env: {}, argv: { mode: string }) => {
     output: {
       filename: "[name]_[contenthash].js",
       path: path.resolve("out"),
+      publicPath: "/",
     },
     devtool: dev ? "eval-source-map" : undefined,
     plugins: [
