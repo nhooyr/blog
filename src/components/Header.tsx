@@ -4,6 +4,7 @@ import React from "react"
 import GithubIcon from "simple-icons/icons/github.svg"
 import InstagramIcon from "simple-icons/icons/instagram.svg"
 import MailIcon from "simple-icons/icons/minutemailer.svg"
+import SpotifyIcon from "simple-icons/icons/spotify.svg"
 import H2 from "./H2"
 import Link from "./Link"
 
@@ -50,6 +51,11 @@ export default function Header() {
           <li>
             <Icon href="https://www.instagram.com/nhooyr/">
               <InstagramIcon />
+            </Icon>
+          </li>
+          <li>
+            <Icon href="https://open.spotify.com/user/o6axtjatwqae3o0csu8gslie9?si=JSkyYtwuRFuZZK8kiAXhkQ">
+              <SpotifyIcon />
             </Icon>
           </li>
           <li>
