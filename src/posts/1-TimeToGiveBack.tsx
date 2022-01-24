@@ -5,25 +5,38 @@ import P from "../components/P"
 export default function TimeToGiveBack() {
   return (
     <>
-      <P>Hi, I'm Anmol. I go by nhooyr on the internet. I'm a software engineer from Toronto.</P>
+      <P>Hi, I'm Anmol. I go by nhooyr on the internet.</P>
+      <P>I'm a software engineer from Toronto (now Victoria, BC).</P>
       <P>I'm a self taught engineer. I didn't attend university and I didn't graduate high school.</P>
       <P>
-        In July, 2017, at the end of my junior year of high school I became employed as a full time engineer at{" "}
-        <Link href="https://coder.com">Coder</Link>. As I was able to gain employment during high school, I felt there
-        was no need for me to continue schooling and so I promptly dropped out.
+        In July, 2017, at the end of my junior year of high school I became employed as a
+        full time engineer at <Link href="https://coder.com">Coder</Link>. As I was able
+        to attain gainful employment while I was 17, I felt there was no need for me to
+        continue schooling and so I dropped out during my first month of senior year.
       </P>
       <P>
-        The greatest factor in my success as an engineer has been my own passion, initiative and focus. However, the
-        incredible volume of quality reading available on websites, blogs and forums has contributed immensely. For at
-        least the last 8 years, the internet has been my primary means of education.
+        There's little valuable information you cannot learn by yourself.
       </P>
-      <P>It's time for me to contribute back.</P>
       <P>
-        On this blog you can expect to find quality writings about software, philosophy, life and everything in between.
-        There will never be <i>any</i> ads, popups or bullshit.
+        To be clear, I don't think self education is a pancea. There are trade offs. I've
+        certainly suffered from the negative consequences. Nonetheless I think I will
+        benefit overall. People often tell me I'm taking a short cut but I'm looking 30
+        years out, not 5 or 10.
       </P>
-      <P>This blog is well engineered and one of my first posts will be to justify its inner workings.</P>
-      <P>I sincerely hope my efforts with this blog are successful in giving back.</P>
+      <P>
+        The greatest factor in my success as an engineer has been my own passion,
+        initiative and focus. However, the incredible volume of quality reading available
+        on websites, blogs and forums has contributed immensely. For at least the last 8
+        years, the internet has been my primary means of education.
+      </P>
+      <P>I wish to contribute back.</P>
+      <P>
+        On this blog you can expect to find quality writings about software, philosophy,
+        life and everything in between.
+      </P>
+      <P>
+        I'll be taking my time though. I have no intention of adding more noise to the world.
+      </P>
     </>
   )
 }

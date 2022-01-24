@@ -21,6 +21,14 @@ export function formatDate(date: Date) {
 const index: Array<Post> = [
   {
     meta: {
+      title: "Broken Roots",
+      path: "/2021/12/20/broken-roots",
+      publishDate: new Date("Jan 24, 2022"),
+    },
+    body: () => import("./3-BrokenRoots"),
+  },
+  {
+    meta: {
       title: "Why nhooyr?",
       path: "/why-nhooyr",
       publishDate: new Date("Feb 9, 2020"),
@@ -32,6 +40,7 @@ const index: Array<Post> = [
       title: "Time To Give Back",
       path: "/time-to-give-back",
       publishDate: new Date("Feb 2, 2020"),
+      editDate: new Date("Dec 20, 2021"),
     },
     body: () => import("./1-TimeToGiveBack"),
   },

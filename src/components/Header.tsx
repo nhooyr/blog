@@ -1,10 +1,6 @@
 import { css } from "@emotion/core"
 import React from "react"
 
-import GithubIcon from "simple-icons/icons/github.svg"
-import InstagramIcon from "simple-icons/icons/instagram.svg"
-import MailIcon from "simple-icons/icons/minutemailer.svg"
-import SpotifyIcon from "simple-icons/icons/spotify.svg"
 import H2 from "./H2"
 import Link from "./Link"
 
@@ -19,15 +15,21 @@ export default function Header() {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            white-space: nowrap;
+            overflow: auto;
             margin: 0;
           }
 
           ul li + li {
-            margin-left: 25px;
+            margin-left: 20px;
+          }
+
+          ul li:nth-of-type(1) {
+            margin-right: auto;
           }
 
           ul li:nth-of-type(2) {
-            margin-left: auto;
+            margin-left: 40px;
           }
         `}
       >
@@ -44,45 +46,25 @@ export default function Header() {
             </H2>
           </li>
           <li>
-            <Icon href="https://github.com/nhooyr">
-              <GithubIcon />
-            </Icon>
+            <Link
+              href="https://open.spotify.com/user/o6axtjatwqae3o0csu8gslie9?si=JSkyYtwuRFuZZK8kiAXhkQ"
+              visitable={false}
+            >
+              spotify
+            </Link>
           </li>
           <li>
-            <Icon href="https://www.instagram.com/nhooyr/">
-              <InstagramIcon />
-            </Icon>
+            <Link href="https://github.com/nhooyr" visitable={false}>
+              github
+            </Link>
           </li>
           <li>
-            <Icon href="https://open.spotify.com/user/o6axtjatwqae3o0csu8gslie9?si=JSkyYtwuRFuZZK8kiAXhkQ">
-              <SpotifyIcon />
-            </Icon>
-          </li>
-          <li>
-            <Icon href="mailto:hi@nhooyr.io">
-              <MailIcon />
-            </Icon>
+            <Link href="mailto:hi@nhooyr.io" visitable={false}>
+              email
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
-
-function Icon(props: { href: string; children?: React.ReactNode }) {
-  return (
-    <Link
-      css={css`
-        svg {
-          width: 24px;
-          height: 100%;
-        }
-      `}
-      href={props.href}
-      visitable={false}
-      aria-label={props.href}
-    >
-      {props.children}
-    </Link>
   )
 }
