@@ -15,7 +15,10 @@ export default function TimeToGiveBack() {
         continue schooling and so I dropped out during my first month of senior year.
       </P>
       <P>
-        There's little valuable information you cannot learn by yourself.
+        There's little valuable information you cannot learn by yourself because it all
+        merely comes down to some sequence of ANDs and ORs. It's actually how I figure
+        out whether I understood something I taught myself. By breaking it down into
+        its most fundamental statements approaching its axioms.
       </P>
       <P>
         To be clear, I don't think self education is a pancea. There are trade offs. I've

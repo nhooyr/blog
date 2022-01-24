@@ -22,8 +22,9 @@ const index: Array<Post> = [
   {
     meta: {
       title: "Broken Roots",
-      path: "/2021/12/20/broken-roots",
-      publishDate: new Date("Jan 24, 2022"),
+      path: "/2020/12/25/broken-roots",
+      publishDate: new Date("Dec 25, 2020"),
+      editDate: new Date("Jan 25, 2022"),
     },
     body: () => import("./3-BrokenRoots"),
   },
