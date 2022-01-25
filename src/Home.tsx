@@ -13,7 +13,7 @@ export default function Home() {
         <br />
         I go by nhooyr on the internet.
         <br />
-        I'm a software engineer from Victoria, BC.
+        I'm a software engineer from <Link href="https://en.wikipedia.org/wiki/Kaslo">Kaslo, BC</Link>.
         <br />
         Welcome to my blog.
       </P>

@@ -8,9 +8,9 @@ export default function BrokenRoots() {
     <>
       <P>
         <em>edit:</em> It's been a rocky year. Very high highs and very low lows. I started writing this blog post on
-        December 25, 2020 but I've finally published it now on January 25th, 2020. Not because it was hard to write but
-        because I wasn't comfortable with it being public. I'm still not but it's good practice being vulnerable in
-        public and I think it could help someone with similar thoughts.
+        December 25, 2020 but I've finally published it now on January 25th, 2025. Not because it was hard to write but
+        because I wasn't comfortable with it being public. I'm still not but it's good practice being vulnerable and I
+        think it's valuable to anyone who has similar thoughts.
       </P>
       <P>
         I've greatly come to appreciate how little I understand anything. Every question I answer I have ten more. At my
@@ -27,8 +27,8 @@ export default function BrokenRoots() {
       <P>
         Back in highschool I had many consecutive months of incredible productivity that allowed me to get very good at
         software, physics and math. It happened once in grade 9, a few times in grade 10, a few times in grade 11 and
-        then once in grade 12. These periods of incredible performance are how I got good enough to get hired at
-        coder.com. See <Link href={posts.slice().reverse()[0].meta.path}>Time to Give Back</Link>.
+        then once in grade 12. These periods of high performance are how I got good enough to get hired at coder.com.
+        See <Link href={posts.slice().reverse()[0].meta.path}>Time to Give Back</Link>.
       </P>
       <P>
         After I started working in the industry, I've only felt the same levels of productivity once. It frustrates me
@@ -69,10 +69,9 @@ export default function BrokenRoots() {
       <P>I mean no offence to anyone who has given or accepted said advice.</P>
       <P>
         I know I seem like a crazy fanatic but I trust my intuition and vision. I'll update the blog once I have
-        something concrete. Until I'm satisfied with my roots, I can't stand by anything I do. Consider the incredible
-        overengineering hack job on this blog. It's complete trash.
+        something concrete. Until I'm satisfied with my roots, I can't stand by anything I do. I made an exception for
+        this one post.
       </P>
-      <P>I made an exception for this one post. I hope someone out there finds it helpful.</P>
     </>
   )
 }

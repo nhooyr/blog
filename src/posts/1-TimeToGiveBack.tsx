@@ -15,8 +15,9 @@ export default function TimeToGiveBack() {
       </P>
       <P>
         I believe there's little valuable information you cannot learn by yourself because it all comes down to some
-        sequence of NANDs (or more intuitively ANDs and ORs). It's how I check to see whether I've understood something.
-        I break it down into its most fundamental statements and realize its axioms.
+        sequence of <Link href="https://en.wikipedia.org/wiki/Functional_completeness">NANDs</Link>. It's how I check to
+        see whether I've understood something. I break it down into its most fundamental statements and try to realize
+        its axioms.
       </P>
       <P>
         To be clear, I don't think self education is a panacea. There are trade offs. I've certainly suffered from the
