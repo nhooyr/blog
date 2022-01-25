@@ -15,11 +15,11 @@ export default function TimeToGiveBack() {
       </P>
       <P>
         I believe there's little valuable information you cannot learn by yourself because it all comes down to some
-        sequence of NANDs (or more intuitively ANDs and ORs). It's actually how I check myself to see whether I've
-        understood something. I try to break it down into its most fundamental statements and realize its axioms.
+        sequence of NANDs (or more intuitively ANDs and ORs). It's how I check to see whether I've understood something.
+        I break it down into its most fundamental statements and realize its axioms.
       </P>
       <P>
-        To be clear, I don't think self education is a pancea. There are trade offs. I've certainly suffered from the
+        To be clear, I don't think self education is a panacea. There are trade offs. I've certainly suffered from the
         negative consequences. Nonetheless I think I have and will benefit overall. People often tell me I'm taking a
         short cut but I'm looking 30 years out, not 5 or 10.
       </P>
