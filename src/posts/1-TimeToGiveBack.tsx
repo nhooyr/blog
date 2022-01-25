@@ -6,7 +6,7 @@ export default function TimeToGiveBack() {
   return (
     <>
       <P>Hi, I'm Anmol. I go by nhooyr on the internet.</P>
-      <P>I'm a software engineer from Toronto (now Victoria, BC).</P>
+      <P>I'm a software engineer from Toronto (now Kaslo, BC).</P>
       <P>I'm a self taught engineer. I didn't attend university and I didn't graduate high school.</P>
       <P>
         In July, 2017, at the end of my junior year of high school I became employed as a
@@ -15,16 +15,16 @@ export default function TimeToGiveBack() {
         continue schooling and so I dropped out during my first month of senior year.
       </P>
       <P>
-        There's little valuable information you cannot learn by yourself because it all
-        merely comes down to some sequence of ANDs and ORs. It's actually how I figure
-        out whether I understood something I taught myself. By breaking it down into
-        its most fundamental statements approaching its axioms.
+        I believe there's little valuable information you cannot learn by yourself because
+        it all comes down to some sequence of NANDs (or more intuitively ANDs and ORs).
+        It's actually how I check myself to see whether I've understood something. I try
+        to break it down into its most fundamental statements and realize its axioms.
       </P>
       <P>
         To be clear, I don't think self education is a pancea. There are trade offs. I've
-        certainly suffered from the negative consequences. Nonetheless I think I will
-        benefit overall. People often tell me I'm taking a short cut but I'm looking 30
-        years out, not 5 or 10.
+        certainly suffered from the negative consequences. Nonetheless I think I have and
+        will benefit overall. People often tell me I'm taking a short cut but I'm looking
+        30 years out, not 5 or 10.
       </P>
       <P>
         The greatest factor in my success as an engineer has been my own passion,
