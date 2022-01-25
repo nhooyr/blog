@@ -7,13 +7,10 @@ export default function BrokenRoots() {
   return (
     <>
       <P>
-        <em>
-          <strong>edit:</strong>
-        </em>{" "}
-        It's been a rocky year. Very high highs and very low lows. I started writing this blog post on December 25, 2020
-        but I've finally published it now on January 25th, 2020. Not because it was hard to write but because I wasn't
-        comfortable with it being public. I'm still not but it's good practice being vulnerable in public and I think
-        it could help someone with similar thoughts.
+        <em>edit:</em> It's been a rocky year. Very high highs and very low lows. I started writing this blog post on
+        December 25, 2020 but I've finally published it now on January 25th, 2020. Not because it was hard to write but
+        because I wasn't comfortable with it being public. I'm still not but it's good practice being vulnerable in
+        public and I think it could help someone with similar thoughts.
       </P>
       <P>
         I've greatly come to appreciate how little I understand anything. Every question I answer I have ten more. At my
@@ -63,7 +60,7 @@ export default function BrokenRoots() {
       <P>
         It's very hard to reflect, look inward and realize you're not living up to your potential. But easy to blame it
         on burnout or needing to "try" harder. The reality as far as I understand it is that most people are always
-        trying their best. No one intentionally doesn't try. That very notion doesn't align with human behaviour. Why
+        trying their best. No one intentionally doesn't try. The very notion doesn't align with human behaviour. Why
         wouldn't someone try their best? At the very least, it certainly doesn't apply to me. I'm always trying as hard
         as I can. What I'm getting at is that I believe there are real concrete reasons for my inferior performance,
         especially compared to my past and they're not because I've been doing it too long or because I haven't been
@@ -72,9 +69,10 @@ export default function BrokenRoots() {
       <P>I mean no offence to anyone who has given or accepted said advice.</P>
       <P>
         I know I seem like a crazy fanatic but I trust my intuition and vision. I'll update the blog once I have
-        something concrete. Until I'm satisfied with my roots, I can't stand by anything I write. I made an exception
-        for this one post.
+        something concrete. Until I'm satisfied with my roots, I can't stand by anything I do. Consider the incredible
+        overengineering hack job on this blog. It's complete trash.
       </P>
+      <P>I made an exception for this one post. I hope someone out there finds it helpful.</P>
     </>
   )
 }
