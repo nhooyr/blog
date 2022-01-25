@@ -26,6 +26,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: yarn --frozen-lockfile && yarn test
-      - uses: coverallsapp/github-action@v1.0.1
-        with:
-          github-token: ${{ secrets.github_token }}
+        env:
+          CI: 1
