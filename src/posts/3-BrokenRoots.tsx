@@ -8,7 +8,7 @@ export default function BrokenRoots() {
     <>
       <P>
         <em>edit:</em> It's been a rocky year. Very high highs and very low lows. I started writing this blog post on
-        December 25, 2020 but I've finally published it now on January 25th, 2025. Not because it was hard to write but
+        December 25, 2020 but I've finally published it now on January 25th, 2022. Not because it was hard to write but
         because I wasn't comfortable with it being public. I'm still not but it's good practice being vulnerable and I
         think it's valuable to anyone who has similar thoughts.
       </P>
