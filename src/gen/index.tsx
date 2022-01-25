@@ -1,4 +1,5 @@
 import * as fs from "fs"
+import * as path from "path"
 import * as Navi from "navi"
 import * as React from "react"
 import ReactDOMServer from "react-dom/server"
@@ -36,6 +37,7 @@ async function main() {
     if (fileName === "") {
       fileName = "index"
     }
+    await fs.promises.mkdir(path.dirname(`out/${fileName}`), { recursive: true })
     fs.writeFileSync(`out/${fileName}.html`, staticHTML)
   }
 }
