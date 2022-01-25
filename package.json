@@ -69,5 +69,8 @@
   },
   "resolutions": {
     "vfile-message": "^2.0.0"
+  },
+  "dependencies": {
+    "vfile-message": "^2.0.0"
   }
 }
