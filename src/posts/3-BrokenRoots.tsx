@@ -12,7 +12,8 @@ export default function BrokenRoots() {
         </em>{" "}
         It's been a rocky year. Very high highs and very low lows. I started writing this blog post on December 25, 2020
         but I've finally published it now on January 25th, 2020. Not because it was hard to write but because I wasn't
-        comfortable with it being public. I'm still not but it's good practice being vulnerable in public.
+        comfortable with it being public. I'm still not but it's good practice being vulnerable in public and I think
+        it could help someone with similar thoughts.
       </P>
       <P>
         I've greatly come to appreciate how little I understand anything. Every question I answer I have ten more. At my
