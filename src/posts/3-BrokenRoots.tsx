@@ -68,7 +68,7 @@ export default function BrokenRoots() {
       </P>
       <P>I mean no offence to anyone who has given or accepted said advice.</P>
       <P>
-        I know I seem like a crazy fanatic but I trust my intuition and vision. I'll update the blog once I have
+        I know I seem like a crazy fanatic but I have faith in my intuition and vision. I'll update the blog once I have
         something concrete. Until I'm satisfied with my roots, I can't stand by anything I do. I made an exception for
         this one post.
       </P>
