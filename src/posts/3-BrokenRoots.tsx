@@ -15,8 +15,8 @@ export default function BrokenRoots() {
       <P>
         I've greatly come to appreciate how little I understand anything. Every question I answer I have ten more. At my
         current rate, most of my ambitions will be left abandoned. It makes me sad. I need to get faster and so I've
-        decided to quit my job at Coder and work on my productivity full time. My goal over next year is to understand
-        and reliably replicate my peak productivity every single day.
+        decided to quit my job at Coder and work on my productivity full time. My goal over the next year is to
+        understand and reliably replicate a state of hyper productivity every single day.
       </P>
       <P>I have a strong intuition I can be much faster and I'm going to lay out my reasoning below.</P>
       <P>
@@ -25,14 +25,14 @@ export default function BrokenRoots() {
         night which is completely impractical and leads to my sleep schedule constantly shifting forward.
       </P>
       <P>
-        Back in highschool I had many consecutive months of incredible productivity that allowed me to get very good at
+        Back in highschool I had many consecutive months of hyper productivity that allowed me to get very good at
         software, physics and math. It happened once in grade 9, a few times in grade 10, a few times in grade 11 and
         then once in grade 12. These periods of high performance are how I got good enough to get hired at coder.com.
         See <Link href={posts.slice().reverse()[0].meta.path}>Time to Give Back</Link>.
       </P>
       <P>
-        After I started working in the industry, I've only felt the same levels of productivity once. It frustrates me
-        to no end. I see no reason why I shouldn't be able to replicate my performance during those times again.
+        After I started working in the industry, I've only felt the same fire once. It frustrates me to no end. I'm
+        stagnating. I see zero reason why I shouldn't be able to replicate it.
       </P>
       <P>
         Yes I've talked to doctors to see if I'm depressed or suffer from anxiety and they say I do. I've tried
