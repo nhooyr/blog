@@ -6,7 +6,9 @@ export default function TimeToGiveBack() {
   return (
     <>
       <P>Hi, I'm Anmol. I go by nhooyr on the internet.</P>
-      <P>I'm a software engineer from Toronto (now Kaslo, BC).</P>
+      <P>
+        I'm a software engineer from Toronto (now <Link href="https://en.wikipedia.org/wiki/Kaslo">Kaslo, BC</Link>).
+      </P>
       <P>I'm a self taught engineer. I didn't attend university and I didn't graduate high school.</P>
       <P>
         In July, 2017, at the end of my junior year of high school I became employed as a full time engineer at{" "}
