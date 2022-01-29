@@ -44,8 +44,8 @@ export default function BrokenRoots() {
         Because of their fundamental influence upon the entirety of my life, my core habits and behaviors are my
         "roots". They are presently broken because I cannot be reliably productive to the degree I believe I'm capable
         of. I should clarify that by productive I don't merely mean able to do things but do things with a near
-        axiomatic level of precision and understanding. It's impossible to define and it's mostly intuition but I just
-        know I'm not operating at the level I could be.
+        axiomatic level of precision and understanding. It's impossible to define rigorously and it's mostly intuition
+        but I just know I'm not operating at the level I could be.
       </P>
       <P>
         Not only do I wish to find a set of roots but I also wish to find the most minimal set of maximally efficient
