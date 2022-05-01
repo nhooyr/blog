@@ -14,6 +14,11 @@ export default function Home() {
         I go by nhooyr on the internet.
         <br />
         I'm a software engineer from <Link href="https://en.wikipedia.org/wiki/Kaslo">Kaslo, BC</Link>.
+        <span style={{ display: "none" }}>
+          {" "}
+          <br /> I currently work at <Link href="https://terrastruct.com">Terrastruct</Link> on the{" "}
+          <Link href="https://terrastruct.com/docs/d2/tour/intro/">d2</Link> declarative diagramming language.
+        </span>
         <br />
         Welcome to my blog.
       </P>
