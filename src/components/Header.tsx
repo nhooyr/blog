@@ -46,11 +46,8 @@ export default function Header() {
             </H2>
           </li>
           <li>
-            <Link
-              href="https://open.spotify.com/user/o6axtjatwqae3o0csu8gslie9?si=JSkyYtwuRFuZZK8kiAXhkQ"
-              visitable={false}
-            >
-              spotify
+            <Link href="https://instagram.com/nhooyr" visitable={false}>
+              instagram
             </Link>
           </li>
           <li>
