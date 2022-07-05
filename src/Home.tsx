@@ -15,7 +15,7 @@ export default function Home() {
         <br />
         I'm a software engineer from <Link href="https://en.wikipedia.org/wiki/Kaslo">Kaslo, BC</Link>. <br /> I
         currently work at <Link href="https://terrastruct.com">Terrastruct</Link> on the{" "}
-        <Link href="https://terrastruct.com/docs/d2/tour/intro/">d2</Link> declarative diagramming language.
+        <Link href="https://terrastruct.com/docs/d2/tour/intro/">D2</Link> declarative diagramming language.
         <br />
         Welcome to my blog.
       </P>
