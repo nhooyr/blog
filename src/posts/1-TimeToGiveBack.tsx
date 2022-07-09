@@ -5,7 +5,7 @@ import P from "../components/P"
 export default function TimeToGiveBack() {
   return (
     <>
-      <P>Hi, I'm Anmol. I go by nhooyr on the internet.</P>
+      <P>Hi, I'm Anmol (Quinn). I go by nhooyr on the internet.</P>
       <P>
         I'm a software engineer from Toronto (now <Link href="https://en.wikipedia.org/wiki/Kaslo">Kaslo, BC</Link>).
       </P>
