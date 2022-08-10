@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <P>
-        Hi, I'm Anmol.
+        Hi, I'm Anmol (Quinn).
         <br />
         I go by nhooyr on the internet.
         <br />
